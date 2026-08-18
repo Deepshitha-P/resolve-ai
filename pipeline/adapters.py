@@ -107,7 +107,7 @@ class JSONDatasetAdapter(DatasetAdapter):
             records = [CaseRecord(**item) for item in data]
             return records[:limit] if limit else records
 
-    def stream_data(self, chunk_size: int = 10000, limit: Optional[int] = None) -> Generator[List[CaseRecord], None, None]:
+    def stream_data(self, chunk_size: int = 10000, limit: Optional[int] = None, offset: int = 0) -> Generator[List[CaseRecord], None, None]:
         records = self.load_data(limit=limit)
         for i in range(0, len(records), chunk_size):
             yield records[i:i + chunk_size]
@@ -145,5 +145,5 @@ class SyntheticDatasetAdapter(DatasetAdapter):
             records.append(rec)
         return records
 
-    def stream_data(self, chunk_size: int = 10000, limit: Optional[int] = None) -> Generator[List[CaseRecord], None, None]:
+    def stream_data(self, chunk_size: int = 10000, limit: Optional[int] = None, offset: int = 0) -> Generator[List[CaseRecord], None, None]:
         yield self.load_data(limit=limit)
