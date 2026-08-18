@@ -1,0 +1,876 @@
+[
+  {
+    "id": "ee83f68d-6ca2-4374-909d-28bdb7f62413",
+    "timestamp": "2026-08-18T19:02:14.005472+00:00",
+    "query": "Analyze the highest-priority operational issues in the current dataset.",
+    "response": {
+      "query": "Analyze the highest-priority operational issues in the current dataset.",
+      "query_type": "root_cause_investigation",
+      "target_layers": [
+        "runbooks",
+        "policies",
+        "issue_clusters",
+        "resolved_historical_cases"
+      ],
+      "answer": {
+        "executive_summary": "ANSWER: The highest-priority operational issue is recurring network signal drops affecting customers, with an escalation rate of 3.7% and a high severity rating.\n\nROOT CAUSE: Line/plant-level infrastructure issues causing intermittent signal disruptions and recurring technical faults.\n\nRECOMMENDED ACTIONS:\n1. Schedule priority technician appointments for customers experiencing signal drops.\n2. Offer service credits for the affected period to mitigate customer dissatisfaction.\n3. Conduct an equipment swap if in-home hardware is suspected as a contributing factor.",
+        "key_findings": [],
+        "root_causes": [
+          "Line/plant-level infrastructure issues causing intermittent signal disruptions and recurring technical faults."
+        ],
+        "recommendations": [
+          "Schedule priority technician appointments for customers experiencing signal drops.",
+          "Offer service credits for the affected period to mitigate customer dissatisfaction.",
+          "Conduct an equipment swap if in-home hardware is suspected as a contributing factor."
+        ],
+        "priority": "HIGH"
+      },
+      "evidence": [
+        {
+          "source_layer": "policies",
+          "document_id": "DOC-POLICY-PDF-CUSTOMER_COMPLAINT_POLICY_KNOWLEDGEBASE_RAG.PDF_chunk45",
+          "excerpt": "Complaint Type:  Intermittent Signal / Recurring Technical Fault\nCustomer Problem:  Customer reports a recurring service quality issue (e.g., picture/signal drops) that has not been fixed \ndespite prior contact.\nRoot Cause:  Line/plant-level infrastr...",
+          "retrieval_score": 1.049,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "policies",
+          "document_id": "DOC-POLICY-PDF-CUSTOMER_COMPLAINT_POLICY_KNOWLEDGEBASE_RAG.PDF_chunk1",
+          "excerpt": "↓  Customer Problem\n↓  Root Cause\n↓  Historical Evidence\n↓  Applicable Policy / Rule\n↓  Recommended Resolution\n↓  Response / Action\n↓  Escalation\n2. Important Note on Data Provenance\nThe TWCS dataset contains only raw public support conversations (cu...",
+          "retrieval_score": 1.021,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "policies",
+          "document_id": "DOC-POLICY-PDF-CUSTOMER_COMPLAINT_POLICY_KNOWLEDGEBASE_RAG.PDF_chunk46",
+          "excerpt": "service credit for the affected period; consider equipment swap if in-home hardware is suspected.\nResponse / Action:  Apologize for the repeat issue; request account/service address via DM; confirm priority technician \nappointment and credit.\nEscalat...",
+          "retrieval_score": 0.998,
+          "confidence": 0.85
+        }
+      ],
+      "grounded": true,
+      "confidence_score": 0.9
+    }
+  },
+  {
+    "id": "d4e4756e-c006-424c-a0a7-808940ba9cd3",
+    "timestamp": "2026-08-18T19:02:12.400814+00:00",
+    "query": "top problems",
+    "response": {
+      "query": "top problems",
+      "query_type": "incident",
+      "target_layers": [
+        "issue_clusters"
+      ],
+      "answer": {
+        "executive_summary": "ANSWER: The top issue involves 'technical_support' for the 'ecommerce' product, with a high escalation rate of 100% and a significant pain score of 22.9/100. 'Technical_support' is the second largest category among 710 analyzed conversations, indicating a recurring customer pain point.\n\nROOT CAUSE:  \n- 'Technical_support' issues account for 115 conversations, representing a substantial portion of customer complaints.  \n- The 'ecommerce' product has a notably high escalation rate and pain score compared to other products like 'MicrosoftHelps'.  \n\nRECOMMENDED ACTIONS:  \n1. Prioritize resolving technical support issues for the 'ecommerce' product to reduce the 100% escalation rate.  \n2. Allocate additional resources to the 'technical_support' category, given its high volume of complaints.  \n3. Implement targeted training for support teams to address technical issues more effectively, focusing on products with higher pain scores.",
+        "key_findings": [],
+        "root_causes": [
+          "'Technical_support' issues account for 115 conversations, representing a substantial portion of customer complaints.",
+          "The 'ecommerce' product has a notably high escalation rate and pain score compared to other products like 'MicrosoftHelps'."
+        ],
+        "recommendations": [
+          "Prioritize resolving technical support issues for the 'ecommerce' product to reduce the 100% escalation rate.",
+          "Allocate additional resources to the 'technical_support' category, given its high volume of complaints.",
+          "Implement targeted training for support teams to address technical issues more effectively, focusing on products with higher pain scores."
+        ],
+        "priority": "HIGH"
+      },
+      "evidence": [
+        {
+          "source_layer": "issue_clusters",
+          "document_id": "DOC-CLUSTER-62_chunk0",
+          "excerpt": "Issue Cluster Ecommerce-Unspecified-Technical_Support Issues: Cluster of 1 complaints regarding 'technical_support' for product 'ecommerce' in region 'unspecified' (esc_rate=100.0%, pain=22.9/100). Pain score: 22.9/100....",
+          "retrieval_score": 0.564,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "issue_clusters",
+          "document_id": "DOC-CLUSTER-45_chunk0",
+          "excerpt": "Issue Cluster Microsofthelps-Unspecified-Technical_Support Issues: Cluster of 1 complaints regarding 'technical_support' for product 'MicrosoftHelps' in region 'unspecified' (esc_rate=0.0%, pain=7.9/100). Pain score: 7.9/100....",
+          "retrieval_score": 0.563,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "issue_clusters",
+          "document_id": "DOC-CLUSTER-44_chunk0",
+          "excerpt": "Issue Cluster Microsofthelps-Unspecified-Technical_Support Issues: Cluster of 1 complaints regarding 'technical_support' for product 'MicrosoftHelps' in region 'unspecified' (esc_rate=0.0%, pain=7.9/100). Pain score: 7.9/100....",
+          "retrieval_score": 0.536,
+          "confidence": 0.85
+        }
+      ],
+      "grounded": true,
+      "confidence_score": 0.49000000953674316
+    }
+  },
+  {
+    "id": "68fb43d0-c980-40ee-a62c-71b3bfa73efe",
+    "timestamp": "2026-08-18T19:02:04.314754+00:00",
+    "query": "top problems",
+    "response": {
+      "query": "top problems",
+      "query_type": "incident",
+      "target_layers": [
+        "issue_clusters"
+      ],
+      "answer": {
+        "executive_summary": "ANSWER: The top problem is technical support for the 'ecommerce' product, with a high escalation rate (100%) and moderate pain score (22.9/100). Technical support for 'MicrosoftHelps' has low pain scores (7.9/100) and no escalations.  \n\nROOT CAUSE:  \n- Ecommerce technical support issues have a 100% escalation rate, indicating unresolved customer frustration.  \n- MicrosoftHelps technical support issues show minimal pain and no escalations, suggesting effective resolution.  \n\nRECOMMENDED ACTIONS:  \n1. Prioritize root-cause analysis for ecommerce technical support due to high escalation rate.  \n2. Investigate pain points in ecommerce support (pain score 22.9) to reduce customer friction.  \n3. Replicate MicrosoftHelps' technical support resolution practices for ecommerce support.",
+        "key_findings": [],
+        "root_causes": [
+          "Ecommerce technical support issues have a 100% escalation rate, indicating unresolved customer frustration.",
+          "MicrosoftHelps technical support issues show minimal pain and no escalations, suggesting effective resolution."
+        ],
+        "recommendations": [
+          "Prioritize root-cause analysis for ecommerce technical support due to high escalation rate.",
+          "Investigate pain points in ecommerce support (pain score 22.9) to reduce customer friction.",
+          "Replicate MicrosoftHelps' technical support resolution practices for ecommerce support."
+        ],
+        "priority": "HIGH"
+      },
+      "evidence": [
+        {
+          "source_layer": "issue_clusters",
+          "document_id": "DOC-CLUSTER-62_chunk0",
+          "excerpt": "Issue Cluster Ecommerce-Unspecified-Technical_Support Issues: Cluster of 1 complaints regarding 'technical_support' for product 'ecommerce' in region 'unspecified' (esc_rate=100.0%, pain=22.9/100). Pain score: 22.9/100....",
+          "retrieval_score": 0.564,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "issue_clusters",
+          "document_id": "DOC-CLUSTER-45_chunk0",
+          "excerpt": "Issue Cluster Microsofthelps-Unspecified-Technical_Support Issues: Cluster of 1 complaints regarding 'technical_support' for product 'MicrosoftHelps' in region 'unspecified' (esc_rate=0.0%, pain=7.9/100). Pain score: 7.9/100....",
+          "retrieval_score": 0.563,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "issue_clusters",
+          "document_id": "DOC-CLUSTER-44_chunk0",
+          "excerpt": "Issue Cluster Microsofthelps-Unspecified-Technical_Support Issues: Cluster of 1 complaints regarding 'technical_support' for product 'MicrosoftHelps' in region 'unspecified' (esc_rate=0.0%, pain=7.9/100). Pain score: 7.9/100....",
+          "retrieval_score": 0.536,
+          "confidence": 0.85
+        }
+      ],
+      "grounded": true,
+      "confidence_score": 0.49000000953674316
+    }
+  },
+  {
+    "id": "c725f117-958d-4259-a5de-8dbeeb8be7f9",
+    "timestamp": "2026-08-18T19:00:35.612542+00:00",
+    "query": "What is causing the spike in Other complaints and what is the recommended resolution?",
+    "response": {
+      "query": "What is causing the spike in Other complaints and what is the recommended resolution?",
+      "query_type": "historical_precedent",
+      "target_layers": [
+        "resolved_historical_cases"
+      ],
+      "answer": {
+        "executive_summary": "ANSWER: The spike in \"Other\" complaints is linked to ambiguous or poorly categorized customer issues, as evidenced by the high volume (304 out of 710 conversations) and generic phrasing in cases like CONV-397, CONV-717, and CONV-671.  \n\nROOT CAUSE: Inadequate categorization or unclear options in the support system lead customers to default to \"Other\" when their issues don't fit predefined categories.  \n\nRECOMMENDED ACTIONS:  \n1. Audit and refine the list of support categories to ensure they cover common issues more comprehensively.  \n2. Implement mandatory follow-up questions when \"Other\" is selected to clarify the actual issue.  \n3. Train support agents to re-categorize \"Other\" cases manually during interactions to improve tracking.",
+        "key_findings": [],
+        "root_causes": [
+          "Inadequate categorization or unclear options in the support system lead customers to default to \"Other\" when their issues don't fit predefined categories."
+        ],
+        "recommendations": [
+          "Audit and refine the list of support categories to ensure they cover common issues more comprehensively.",
+          "Implement mandatory follow-up questions when \"Other\" is selected to clarify the actual issue.",
+          "Train support agents to re-categorize \"Other\" cases manually during interactions to improve tracking."
+        ],
+        "priority": "MEDIUM"
+      },
+      "evidence": [
+        {
+          "source_layer": "customer_cases",
+          "document_id": "DOC-CASE-CONV-397_chunk0",
+          "excerpt": "Customer complaint CONV-397: what exactly is the issue you are having?...",
+          "retrieval_score": 0.886,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "customer_cases",
+          "document_id": "DOC-CASE-CONV-717_chunk0",
+          "excerpt": "Customer complaint CONV-717: this is what is happening......",
+          "retrieval_score": 0.864,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "customer_cases",
+          "document_id": "DOC-CASE-CONV-671_chunk0",
+          "excerpt": "Customer complaint CONV-671: what in the world?!...",
+          "retrieval_score": 0.779,
+          "confidence": 0.85
+        }
+      ],
+      "grounded": true,
+      "confidence_score": 0.6100000143051147
+    }
+  },
+  {
+    "id": "b959b1b0-e08e-40c6-a545-5c17cc23d1bc",
+    "timestamp": "2026-08-18T19:00:34.215408+00:00",
+    "query": "What is causing the spike in Other complaints and what is the recommended resolution?",
+    "response": {
+      "query": "What is causing the spike in Other complaints and what is the recommended resolution?",
+      "query_type": "historical_precedent",
+      "target_layers": [
+        "resolved_historical_cases"
+      ],
+      "answer": {
+        "executive_summary": "ANSWER: The spike in \"Other\" complaints is due to ambiguous or poorly categorized customer issues, as indicated by 304 out of 710 total conversations falling into this category.\n\nROOT CAUSE: Insufficient categorization options or unclear guidance for customers when submitting complaints, leading to misclassification.\n\nRECOMMENDED ACTIONS:  \n1. Review and expand the complaint categorization options to reduce \"Other\" entries.  \n2. Provide clear prompts or examples to guide customers when selecting complaint categories.  \n3. Analyze a sample of \"Other\" complaints manually to identify common themes and reclassify them.",
+        "key_findings": [],
+        "root_causes": [
+          "Insufficient categorization options or unclear guidance for customers when submitting complaints, leading to misclassification."
+        ],
+        "recommendations": [
+          "Review and expand the complaint categorization options to reduce \"Other\" entries.",
+          "Provide clear prompts or examples to guide customers when selecting complaint categories.",
+          "Analyze a sample of \"Other\" complaints manually to identify common themes and reclassify them."
+        ],
+        "priority": "MEDIUM"
+      },
+      "evidence": [
+        {
+          "source_layer": "customer_cases",
+          "document_id": "DOC-CASE-CONV-397_chunk0",
+          "excerpt": "Customer complaint CONV-397: what exactly is the issue you are having?...",
+          "retrieval_score": 0.886,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "customer_cases",
+          "document_id": "DOC-CASE-CONV-717_chunk0",
+          "excerpt": "Customer complaint CONV-717: this is what is happening......",
+          "retrieval_score": 0.864,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "customer_cases",
+          "document_id": "DOC-CASE-CONV-671_chunk0",
+          "excerpt": "Customer complaint CONV-671: what in the world?!...",
+          "retrieval_score": 0.779,
+          "confidence": 0.85
+        }
+      ],
+      "grounded": true,
+      "confidence_score": 0.6100000143051147
+    }
+  },
+  {
+    "id": "c823de4f-b327-48c5-b552-a0260bc7b54c",
+    "timestamp": "2026-08-18T17:58:07.575422+00:00",
+    "query": "Investigate the spike in Network / Service Outage complaints around the week of Aug 10, 2026.",
+    "response": {
+      "query": "Investigate the spike in Network / Service Outage complaints around the week of Aug 10, 2026.",
+      "query_type": "network_outage",
+      "target_layers": [
+        "issue_clusters",
+        "analytics_snapshots",
+        "runbooks",
+        "customer_cases"
+      ],
+      "answer": {
+        "executive_summary": "ANSWER: The spike in Network/Service Outage complaints around Aug 10, 2026, was likely due to a fiber/network node failure, as indicated by clustered complaints and a 0% signal reading in the affected area. This aligns with 3 specific complaints recorded during this period and a resolution rate of 33.3%.\n\nROOT CAUSE: A fiber/network node failure caused prolonged internet downtime for multiple customers in the same area, triggering the spike in complaints.\n\nRECOMMENDED ACTIONS:\n1. Verify the node-level signal status in the affected area to confirm the fiber/network node failure.\n2. Dispatch a technical team to repair or replace the failed node and restore service.\n3. Proactively notify affected customers of the outage and provide updates on restoration progress.",
+        "key_findings": [],
+        "root_causes": [
+          "A fiber/network node failure caused prolonged internet downtime for multiple customers in the same area, triggering the spike in complaints."
+        ],
+        "recommendations": [
+          "Verify the node-level signal status in the affected area to confirm the fiber/network node failure.",
+          "Dispatch a technical team to repair or replace the failed node and restore service.",
+          "Proactively notify affected customers of the outage and provide updates on restoration progress."
+        ],
+        "priority": "HIGH"
+      },
+      "evidence": [
+        {
+          "source_layer": "runbooks",
+          "document_id": "DOC-RUNBOOK-NETWORK-001_chunk0",
+          "excerpt": "When multiple customers in the same area report internet down for more than a day, first check node-level signal status. A 0% signal reading combined with clustered complaints in one area indicates a fiber/network node failure, not an individual cust...",
+          "retrieval_score": 1.042,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "analytics_snapshots",
+          "document_id": "SNAP-PRT-TELECOM-UNSPECIFIED-SERVICE_OUTAGE-GENERAL_chunk0",
+          "excerpt": "Document: \"telecom - unspecified - service_outage (general) - current\"\nPeriod: current\nTopic: service_outage\nProduct: telecom\nRegion: unspecified\nSubtype: general\nVolume: 3 complaints\nCSAT Proxy: 2.72 / 5\nEscalation Rate: 0.0%\nResolution Rate: 33.3%\n...",
+          "retrieval_score": 0.783,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "analytics_snapshots",
+          "document_id": "SNAP-TOPIC-SERVICE_OUTAGE_chunk0",
+          "excerpt": "Document: \"TOPIC-ROLLUP - service_outage - current\"\n---\nAggregated from 11 thin product├ùregion cells (each < 3 complaints).\nProducts covered: 115769, 115858, 115873, 115900, 116016, AmazonHelp, flight, gaming, unspecified | Regions covered: unspecif...",
+          "retrieval_score": 0.742,
+          "confidence": 0.85
+        }
+      ],
+      "grounded": true,
+      "confidence_score": 0.8899999856948853
+    }
+  },
+  {
+    "id": "8bb47b72-a8cb-4e6a-aa49-196264236299",
+    "timestamp": "2026-08-18T17:58:05.786308+00:00",
+    "query": "Investigate the spike in Network / Service Outage complaints around the week of Aug 10, 2026.",
+    "response": {
+      "query": "Investigate the spike in Network / Service Outage complaints around the week of Aug 10, 2026.",
+      "query_type": "network_outage",
+      "target_layers": [
+        "issue_clusters",
+        "analytics_snapshots",
+        "runbooks",
+        "customer_cases"
+      ],
+      "answer": {
+        "executive_summary": "ANSWER: The spike in Network/Service Outage complaints around Aug 10, 2026, was likely caused by a fiber/network node failure, as indicated by clustered complaints and a 0% signal reading in the affected area.  \n\nROOT CAUSE: A fiber/network node failure disrupted service for multiple customers in the same geographic region, leading to prolonged outages.  \n\nRECOMMENDED ACTIONS:  \n1. Verify node-level signal status in the affected area to confirm the fiber/network node failure.  \n2. Dispatch a field team to inspect and repair the damaged fiber/network node.  \n3. Proactively notify impacted customers with estimated resolution timelines to reduce escalation rates.",
+        "key_findings": [],
+        "root_causes": [
+          "A fiber/network node failure disrupted service for multiple customers in the same geographic region, leading to prolonged outages."
+        ],
+        "recommendations": [
+          "Verify node-level signal status in the affected area to confirm the fiber/network node failure.",
+          "Dispatch a field team to inspect and repair the damaged fiber/network node.",
+          "Proactively notify impacted customers with estimated resolution timelines to reduce escalation rates."
+        ],
+        "priority": "HIGH"
+      },
+      "evidence": [
+        {
+          "source_layer": "runbooks",
+          "document_id": "DOC-RUNBOOK-NETWORK-001_chunk0",
+          "excerpt": "When multiple customers in the same area report internet down for more than a day, first check node-level signal status. A 0% signal reading combined with clustered complaints in one area indicates a fiber/network node failure, not an individual cust...",
+          "retrieval_score": 1.042,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "analytics_snapshots",
+          "document_id": "SNAP-PRT-TELECOM-UNSPECIFIED-SERVICE_OUTAGE-GENERAL_chunk0",
+          "excerpt": "Document: \"telecom - unspecified - service_outage (general) - current\"\nPeriod: current\nTopic: service_outage\nProduct: telecom\nRegion: unspecified\nSubtype: general\nVolume: 3 complaints\nCSAT Proxy: 2.72 / 5\nEscalation Rate: 0.0%\nResolution Rate: 33.3%\n...",
+          "retrieval_score": 0.783,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "analytics_snapshots",
+          "document_id": "SNAP-TOPIC-SERVICE_OUTAGE_chunk0",
+          "excerpt": "Document: \"TOPIC-ROLLUP - service_outage - current\"\n---\nAggregated from 11 thin product├ùregion cells (each < 3 complaints).\nProducts covered: 115769, 115858, 115873, 115900, 116016, AmazonHelp, flight, gaming, unspecified | Regions covered: unspecif...",
+          "retrieval_score": 0.742,
+          "confidence": 0.85
+        }
+      ],
+      "grounded": true,
+      "confidence_score": 0.8899999856948853
+    }
+  },
+  {
+    "id": "c4e3b828-522b-4f66-9ff6-d2a5a21fa378",
+    "timestamp": "2026-08-18T17:58:05.470080+00:00",
+    "query": "Investigate the spike in Network / Service Outage complaints around the week of Aug 10, 2026.",
+    "response": {
+      "query": "Investigate the spike in Network / Service Outage complaints around the week of Aug 10, 2026.",
+      "query_type": "network_outage",
+      "target_layers": [
+        "issue_clusters",
+        "analytics_snapshots",
+        "runbooks",
+        "customer_cases"
+      ],
+      "answer": {
+        "executive_summary": "ANSWER: The spike in Network/Service Outage complaints around Aug 10, 2026, was likely caused by a fiber/network node failure, indicated by clustered complaints in a specific area and a 0% signal reading at the node level. This aligns with the runbook's guidance for identifying such failures.  \n\nROOT CAUSE: A fiber/network node failure disrupted service for multiple customers in a localized area, leading to the spike in complaints.  \n\nRECOMMENDED ACTIONS:  \n1. Verify the node-level signal status in the affected area to confirm the fiber/network node failure.  \n2. Dispatch a technician to inspect and repair the faulty node to restore service.  \n3. Proactively notify impacted customers with updates on the resolution timeline to reduce escalation rates.",
+        "key_findings": [],
+        "root_causes": [
+          "A fiber/network node failure disrupted service for multiple customers in a localized area, leading to the spike in complaints."
+        ],
+        "recommendations": [
+          "Verify the node-level signal status in the affected area to confirm the fiber/network node failure.",
+          "Dispatch a technician to inspect and repair the faulty node to restore service.",
+          "Proactively notify impacted customers with updates on the resolution timeline to reduce escalation rates."
+        ],
+        "priority": "HIGH"
+      },
+      "evidence": [
+        {
+          "source_layer": "runbooks",
+          "document_id": "DOC-RUNBOOK-NETWORK-001_chunk0",
+          "excerpt": "When multiple customers in the same area report internet down for more than a day, first check node-level signal status. A 0% signal reading combined with clustered complaints in one area indicates a fiber/network node failure, not an individual cust...",
+          "retrieval_score": 1.042,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "analytics_snapshots",
+          "document_id": "SNAP-PRT-TELECOM-UNSPECIFIED-SERVICE_OUTAGE-GENERAL_chunk0",
+          "excerpt": "Document: \"telecom - unspecified - service_outage (general) - current\"\nPeriod: current\nTopic: service_outage\nProduct: telecom\nRegion: unspecified\nSubtype: general\nVolume: 3 complaints\nCSAT Proxy: 2.72 / 5\nEscalation Rate: 0.0%\nResolution Rate: 33.3%\n...",
+          "retrieval_score": 0.783,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "analytics_snapshots",
+          "document_id": "SNAP-TOPIC-SERVICE_OUTAGE_chunk0",
+          "excerpt": "Document: \"TOPIC-ROLLUP - service_outage - current\"\n---\nAggregated from 11 thin product├ùregion cells (each < 3 complaints).\nProducts covered: 115769, 115858, 115873, 115900, 116016, AmazonHelp, flight, gaming, unspecified | Regions covered: unspecif...",
+          "retrieval_score": 0.742,
+          "confidence": 0.85
+        }
+      ],
+      "grounded": true,
+      "confidence_score": 0.8899999856948853
+    }
+  },
+  {
+    "id": "6902d12c-7c0e-488f-9736-cd0bd2f3b444",
+    "timestamp": "2026-08-18T17:56:58.062535+00:00",
+    "query": "Investigate the spike in Plan / Pricing complaints around the week of Aug 10, 2026.",
+    "response": {
+      "query": "Investigate the spike in Plan / Pricing complaints around the week of Aug 10, 2026.",
+      "query_type": "temporal_spike",
+      "target_layers": [
+        "temporal_events"
+      ],
+      "answer": {
+        "executive_summary": "ANSWER: The spike in Plan/Pricing complaints around Aug 10, 2026, is not directly supported by the retrieved evidence. The available data shows a temporal spike in technical_support complaints for the product 'flight' on Oct 31, 2017, but no specific metrics for Plan/Pricing complaints in the requested timeframe.  \n\nROOT CAUSE:  \n- No direct evidence of Plan/Pricing complaints around Aug 10, 2026, was retrieved.  \n- The only spike detected was for technical_support complaints related to 'flight' on Oct 31, 2017.  \n\nRECOMMENDED ACTIONS:  \n1. Investigate additional data sources for Plan/Pricing complaints specific to Aug 10, 2026.  \n2. Validate if the 'flight' technical_support spike is relevant to the query or an unrelated anomaly.  \n3. Refine the search to focus exclusively on Plan/Pricing complaints within the specified timeframe.",
+        "key_findings": [],
+        "root_causes": [
+          "No direct evidence of Plan/Pricing complaints around Aug 10, 2026, was retrieved.",
+          "The only spike detected was for technical_support complaints related to 'flight' on Oct 31, 2017."
+        ],
+        "recommendations": [
+          "Investigate additional data sources for Plan/Pricing complaints specific to Aug 10, 2026.",
+          "Validate if the 'flight' technical_support spike is relevant to the query or an unrelated anomaly.",
+          "Refine the search to focus exclusively on Plan/Pricing complaints within the specified timeframe."
+        ],
+        "priority": "HIGH"
+      },
+      "evidence": [
+        {
+          "source_layer": "policies",
+          "document_id": "DOC-POLICY-PDF-CUSTOMER_COMPLAINT_POLICY_KNOWLEDGEBASE_RAG.PDF_chunk10",
+          "excerpt": "regulatory/PR team if outage attracts media attention or affects emergency (911) calling.\n2. Billing Dispute — Unexpected Charge / Incorrect Plan Pricing\nComplaint Category:  Billing Dispute\nComplaint Type:  Unexpected Charge / Incorrect Plan Pricing...",
+          "retrieval_score": 0.97,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "analytics_snapshots",
+          "document_id": "SNAP-SPIKE-FLIGHT-UNSPECIFIED-TECHNICAL_SUPPORT_chunk0",
+          "excerpt": "Temporal spike detected: technical_support complaints for product 'flight' in region 'unspecified' reached 5 on 2017-10-31, vs historical average of 2.5 (z-score 1.67). Trend: spiking. Sentiment trajectory direction: improving. Escalation rate: 0.0% ...",
+          "retrieval_score": 0.728,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "customer_cases",
+          "document_id": "DOC-CASE-CONV-789_chunk0",
+          "excerpt": "Customer complaint CONV-789: 3/3 on the wrong which i really don’t appreciate. this needs to be investigate and i was simply queuing to pay and the guy pushed in😡...",
+          "retrieval_score": 0.633,
+          "confidence": 0.85
+        }
+      ],
+      "grounded": true,
+      "confidence_score": 0.8299999833106995
+    }
+  },
+  {
+    "id": "efa1f757-fe92-48c4-bbc1-aaf3715dd4ef",
+    "timestamp": "2026-08-18T17:56:57.161495+00:00",
+    "query": "Investigate the spike in Plan / Pricing complaints around the week of Aug 10, 2026.",
+    "response": {
+      "query": "Investigate the spike in Plan / Pricing complaints around the week of Aug 10, 2026.",
+      "query_type": "temporal_spike",
+      "target_layers": [
+        "temporal_events"
+      ],
+      "answer": {
+        "executive_summary": "ANSWER: The spike in Plan/Pricing complaints around Aug 10, 2026, is not directly supported by the retrieved evidence. The available data shows a spike in technical_support complaints for the 'flight' product on Oct 31, 2017, but no Plan/Pricing complaints are referenced.\n\nROOT CAUSE:  \n- No evidence of Plan/Pricing complaints around Aug 10, 2026, was retrieved.  \n- The only spike detected relates to technical_support for 'flight' on Oct 31, 2017.  \n\nRECOMMENDED ACTIONS:  \n1. Investigate additional data sources for Plan/Pricing complaints around Aug 10, 2026.  \n2. Verify if the 'flight' technical_support spike is misclassified or unrelated to the query.  \n3. Clarify the query scope to align with available evidence or expand data retrieval parameters.",
+        "key_findings": [],
+        "root_causes": [
+          "No evidence of Plan/Pricing complaints around Aug 10, 2026, was retrieved.",
+          "The only spike detected relates to technical_support for 'flight' on Oct 31, 2017."
+        ],
+        "recommendations": [
+          "Investigate additional data sources for Plan/Pricing complaints around Aug 10, 2026.",
+          "Verify if the 'flight' technical_support spike is misclassified or unrelated to the query.",
+          "Clarify the query scope to align with available evidence or expand data retrieval parameters."
+        ],
+        "priority": "HIGH"
+      },
+      "evidence": [
+        {
+          "source_layer": "policies",
+          "document_id": "DOC-POLICY-PDF-CUSTOMER_COMPLAINT_POLICY_KNOWLEDGEBASE_RAG.PDF_chunk10",
+          "excerpt": "regulatory/PR team if outage attracts media attention or affects emergency (911) calling.\n2. Billing Dispute — Unexpected Charge / Incorrect Plan Pricing\nComplaint Category:  Billing Dispute\nComplaint Type:  Unexpected Charge / Incorrect Plan Pricing...",
+          "retrieval_score": 0.97,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "analytics_snapshots",
+          "document_id": "SNAP-SPIKE-FLIGHT-UNSPECIFIED-TECHNICAL_SUPPORT_chunk0",
+          "excerpt": "Temporal spike detected: technical_support complaints for product 'flight' in region 'unspecified' reached 5 on 2017-10-31, vs historical average of 2.5 (z-score 1.67). Trend: spiking. Sentiment trajectory direction: improving. Escalation rate: 0.0% ...",
+          "retrieval_score": 0.728,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "customer_cases",
+          "document_id": "DOC-CASE-CONV-789_chunk0",
+          "excerpt": "Customer complaint CONV-789: 3/3 on the wrong which i really don’t appreciate. this needs to be investigate and i was simply queuing to pay and the guy pushed in😡...",
+          "retrieval_score": 0.633,
+          "confidence": 0.85
+        }
+      ],
+      "grounded": true,
+      "confidence_score": 0.8299999833106995
+    }
+  },
+  {
+    "id": "6fb9e6cf-039f-4b58-9e59-fe9416ee3abe",
+    "timestamp": "2026-08-18T16:32:03.710481+00:00",
+    "query": "what needs to be resolved today",
+    "response": {
+      "query": "what needs to be resolved today",
+      "query_type": "historical_precedent",
+      "target_layers": [
+        "resolved_historical_cases"
+      ],
+      "answer": {
+        "executive_summary": "ANSWER: The customer complaints requiring immediate resolution today include fixing CONV-1510 permanently, investigating the queueing issue in CONV-789, and ensuring availability of the $3 burrito promotion in CONV-1328.\n\nROOT CAUSE: The root cause stems from unresolved customer complaints ranging from service issues to promotional availability.\n\nRECOMMENDED ACTIONS:\n1. Permanently resolve the issue reported in CONV-1510.\n2. Investigate and address the queueing incident described in CONV-789.\n3. Confirm and ensure the $3 burrito promotion is active as mentioned in CONV-1328.",
+        "key_findings": [],
+        "root_causes": [
+          "The root cause stems from unresolved customer complaints ranging from service issues to promotional availability."
+        ],
+        "recommendations": [
+          "Permanently resolve the issue reported in CONV-1510.",
+          "Investigate and address the queueing incident described in CONV-789.",
+          "Confirm and ensure the $3 burrito promotion is active as mentioned in CONV-1328."
+        ],
+        "priority": "MEDIUM"
+      },
+      "evidence": [
+        {
+          "source_layer": "customer_cases",
+          "document_id": "DOC-CASE-CONV-1510_chunk0",
+          "excerpt": "Customer complaint CONV-1510: it needs to be fixed. permanently. now....",
+          "retrieval_score": 0.873,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "customer_cases",
+          "document_id": "DOC-CASE-CONV-789_chunk0",
+          "excerpt": "Customer complaint CONV-789: 3/3 on the wrong which i really don’t appreciate. this needs to be investigate and i was simply queuing to pay and the guy pushed in😡...",
+          "retrieval_score": 0.676,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "customer_cases",
+          "document_id": "DOC-CASE-CONV-1328_chunk0",
+          "excerpt": "Customer complaint CONV-1328: don’t forget to cop your $3 burrito today ✨...",
+          "retrieval_score": 0.659,
+          "confidence": 0.85
+        }
+      ],
+      "grounded": true,
+      "confidence_score": 0.5600000023841858
+    }
+  },
+  {
+    "id": "7b80c833-502c-4cfd-b537-129af8d30fee",
+    "timestamp": "2026-08-18T16:02:48.892999+00:00",
+    "query": "Show me top customer complaint clusters",
+    "response": {
+      "query": "Show me top customer complaint clusters",
+      "query_type": "incident",
+      "target_layers": [
+        "issue_clusters"
+      ],
+      "answer": {
+        "executive_summary": "ANSWER: Top customer complaint clusters include issues categorized as 'other' for products 'software' (15 complaints), 'ecommerce' (6 complaints), and 'retail' (5 complaints). These clusters have pain scores of 22.9/100, 22.3/100, and 13.4/100, respectively, with escalation rates up to 16.7%.\n\nROOT CAUSE:  \n- Software-related 'other' complaints have the highest pain score (22.9/100) and a 13.3% escalation rate.  \n- Ecommerce-related 'other' complaints show moderate pain (22.3/100) and higher escalation (16.7%).  \n- Retail-related 'other' complaints have the lowest pain score (13.4/100) and no escalations.\n\nRECOMMENDED ACTIONS:  \n1. Investigate and categorize 'other' software issues to identify recurring patterns and reduce pain points.  \n2. Address ecommerce 'other' complaints with targeted intervention to lower the 16.7% escalation rate.  \n3. Review retail 'other' complaints for potential root causes despite their lower pain score and zero escalation.",
+        "key_findings": [],
+        "root_causes": [
+          "Software-related 'other' complaints have the highest pain score (22.9/100) and a 13.3% escalation rate.",
+          "Ecommerce-related 'other' complaints show moderate pain (22.3/100) and higher escalation (16.7%).",
+          "Retail-related 'other' complaints have the lowest pain score (13.4/100) and no escalations."
+        ],
+        "recommendations": [
+          "Investigate and categorize 'other' software issues to identify recurring patterns and reduce pain points.",
+          "Address ecommerce 'other' complaints with targeted intervention to lower the 16.7% escalation rate.",
+          "Review retail 'other' complaints for potential root causes despite their lower pain score and zero escalation."
+        ],
+        "priority": "HIGH"
+      },
+      "evidence": [
+        {
+          "source_layer": "issue_clusters",
+          "document_id": "DOC-CLUSTER-41_chunk0",
+          "excerpt": "Issue Cluster Retail-Unspecified-Other Issues: Cluster of 5 complaints regarding 'other' for product 'retail' in region 'unspecified' (esc_rate=0.0%, pain=13.4/100). Pain score: 13.4/100....",
+          "retrieval_score": 0.55,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "issue_clusters",
+          "document_id": "DOC-CLUSTER-141_chunk0",
+          "excerpt": "Issue Cluster Ecommerce-Unspecified-Other Issues: Cluster of 6 complaints regarding 'other' for product 'ecommerce' in region 'unspecified' (esc_rate=16.7%, pain=22.3/100). Pain score: 22.3/100....",
+          "retrieval_score": 0.508,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "issue_clusters",
+          "document_id": "DOC-CLUSTER-34_chunk0",
+          "excerpt": "Issue Cluster Software-Unspecified-Other Issues: Cluster of 15 complaints regarding 'other' for product 'software' in region 'unspecified' (esc_rate=13.3%, pain=22.9/100). Pain score: 22.9/100....",
+          "retrieval_score": 0.475,
+          "confidence": 0.85
+        }
+      ],
+      "grounded": true,
+      "confidence_score": 0.4699999988079071
+    }
+  },
+  {
+    "id": "57d1e273-018e-4fc8-850a-827ddc581547",
+    "timestamp": "2026-08-18T16:02:48.030881+00:00",
+    "query": "Show me top customer complaint clusters",
+    "response": {
+      "query": "Show me top customer complaint clusters",
+      "query_type": "incident",
+      "target_layers": [
+        "issue_clusters"
+      ],
+      "answer": {
+        "executive_summary": "ANSWER: The top customer complaint clusters are related to 'software', 'ecommerce', and 'retail' products, with pain scores of 22.9/100, 22.3/100, and 13.4/100, respectively. The escalation rates for 'software' and 'ecommerce' are notably higher at 13.3% and 16.7%.\n\nROOT CAUSE:  \n- 'Software' issues have the highest pain score (22.9/100) and a significant escalation rate (13.3%).  \n- 'Ecommerce' issues show a high escalation rate (16.7%) and pain score (22.3/100).  \n- 'Retail' issues have a lower pain score (13.4/100) and no escalations.\n\nRECOMMENDED ACTIONS:  \n1. Prioritize addressing 'software' issues by identifying root causes and implementing targeted solutions to reduce the pain score and escalation rate.  \n2. Investigate 'ecommerce' complaints to understand the drivers behind the high escalation rate and mitigate customer dissatisfaction.  \n3. Monitor 'retail' complaints proactively to prevent escalation despite the current low pain score.",
+        "key_findings": [],
+        "root_causes": [
+          "'Software' issues have the highest pain score (22.9/100) and a significant escalation rate (13.3%).",
+          "'Ecommerce' issues show a high escalation rate (16.7%) and pain score (22.3/100).",
+          "'Retail' issues have a lower pain score (13.4/100) and no escalations."
+        ],
+        "recommendations": [
+          "Prioritize addressing 'software' issues by identifying root causes and implementing targeted solutions to reduce the pain score and escalation rate.",
+          "Investigate 'ecommerce' complaints to understand the drivers behind the high escalation rate and mitigate customer dissatisfaction.",
+          "Monitor 'retail' complaints proactively to prevent escalation despite the current low pain score."
+        ],
+        "priority": "HIGH"
+      },
+      "evidence": [
+        {
+          "source_layer": "issue_clusters",
+          "document_id": "DOC-CLUSTER-41_chunk0",
+          "excerpt": "Issue Cluster Retail-Unspecified-Other Issues: Cluster of 5 complaints regarding 'other' for product 'retail' in region 'unspecified' (esc_rate=0.0%, pain=13.4/100). Pain score: 13.4/100....",
+          "retrieval_score": 0.55,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "issue_clusters",
+          "document_id": "DOC-CLUSTER-141_chunk0",
+          "excerpt": "Issue Cluster Ecommerce-Unspecified-Other Issues: Cluster of 6 complaints regarding 'other' for product 'ecommerce' in region 'unspecified' (esc_rate=16.7%, pain=22.3/100). Pain score: 22.3/100....",
+          "retrieval_score": 0.508,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "issue_clusters",
+          "document_id": "DOC-CLUSTER-34_chunk0",
+          "excerpt": "Issue Cluster Software-Unspecified-Other Issues: Cluster of 15 complaints regarding 'other' for product 'software' in region 'unspecified' (esc_rate=13.3%, pain=22.9/100). Pain score: 22.9/100....",
+          "retrieval_score": 0.475,
+          "confidence": 0.85
+        }
+      ],
+      "grounded": true,
+      "confidence_score": 0.4699999988079071
+    }
+  },
+  {
+    "id": "6a6506e6-dd52-46aa-b1b8-4c8e51a68bda",
+    "timestamp": "2026-08-18T16:02:41.385044+00:00",
+    "query": "Show me top customer complaint clusters",
+    "response": {
+      "query": "Show me top customer complaint clusters",
+      "query_type": "incident",
+      "target_layers": [
+        "issue_clusters"
+      ],
+      "answer": {
+        "executive_summary": "ANSWER: The top complaint clusters involve 'other' issues across retail (5 complaints, 13.4 pain score), ecommerce (6 complaints, 22.3 pain score), and software (15 complaints, 22.9 pain score). Ecommerce and software clusters show higher escalation rates (16.7% and 13.3% respectively) and pain levels.\n\nROOT CAUSE:  \n- Software has the highest complaint volume (15 complaints) and pain score (22.9/100).  \n- Ecommerce and software clusters have notably higher escalation rates (16.7% and 13.3%) compared to retail (0%).  \n\nRECOMMENDED ACTIONS:  \n1. Investigate root causes of 'other' complaints in the software product category, focusing on the 15 reported issues.  \n2. Prioritize ecommerce complaints due to their high pain score (22.3) and escalation rate (16.7%).  \n3. Implement targeted follow-ups for the software and ecommerce clusters to reduce escalation rates.",
+        "key_findings": [],
+        "root_causes": [
+          "Software has the highest complaint volume (15 complaints) and pain score (22.9/100).",
+          "Ecommerce and software clusters have notably higher escalation rates (16.7% and 13.3%) compared to retail (0%)."
+        ],
+        "recommendations": [
+          "Investigate root causes of 'other' complaints in the software product category, focusing on the 15 reported issues.",
+          "Prioritize ecommerce complaints due to their high pain score (22.3) and escalation rate (16.7%).",
+          "Implement targeted follow-ups for the software and ecommerce clusters to reduce escalation rates."
+        ],
+        "priority": "HIGH"
+      },
+      "evidence": [
+        {
+          "source_layer": "issue_clusters",
+          "document_id": "DOC-CLUSTER-41_chunk0",
+          "excerpt": "Issue Cluster Retail-Unspecified-Other Issues: Cluster of 5 complaints regarding 'other' for product 'retail' in region 'unspecified' (esc_rate=0.0%, pain=13.4/100). Pain score: 13.4/100....",
+          "retrieval_score": 0.55,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "issue_clusters",
+          "document_id": "DOC-CLUSTER-141_chunk0",
+          "excerpt": "Issue Cluster Ecommerce-Unspecified-Other Issues: Cluster of 6 complaints regarding 'other' for product 'ecommerce' in region 'unspecified' (esc_rate=16.7%, pain=22.3/100). Pain score: 22.3/100....",
+          "retrieval_score": 0.508,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "issue_clusters",
+          "document_id": "DOC-CLUSTER-34_chunk0",
+          "excerpt": "Issue Cluster Software-Unspecified-Other Issues: Cluster of 15 complaints regarding 'other' for product 'software' in region 'unspecified' (esc_rate=13.3%, pain=22.9/100). Pain score: 22.9/100....",
+          "retrieval_score": 0.475,
+          "confidence": 0.85
+        }
+      ],
+      "grounded": true,
+      "confidence_score": 0.4699999988079071
+    }
+  },
+  {
+    "id": "8b7b548e-8db4-423b-a4b7-42bea335ffea",
+    "timestamp": "2026-08-18T16:02:41.364452+00:00",
+    "query": "How were node outage issues resolved previously?",
+    "response": {
+      "query": "How were node outage issues resolved previously?",
+      "query_type": "historical_precedent",
+      "target_layers": [
+        "resolved_historical_cases"
+      ],
+      "answer": {
+        "executive_summary": "ANSWER: Previous node outage issues were resolved by verifying node-level signal status for 0% readings and confirming clustered complaints in the affected area. Technicians were deployed to address fiber/network node failures, with documented cases showing successful resolution by field teams.  \n\nROOT CAUSE: Fiber/network node failures were identified through 0% signal readings and geographically concentrated customer complaints.  \n\nRECOMMENDED ACTIONS:  \n1. Prioritize verification of node-level signal status for outages exceeding 24 hours.  \n2. Dispatch technicians to confirmed fiber/network node failure locations.  \n3. Document and share resolution success cases to standardize response protocols.",
+        "key_findings": [],
+        "root_causes": [
+          "Fiber/network node failures were identified through 0% signal readings and geographically concentrated customer complaints."
+        ],
+        "recommendations": [
+          "Prioritize verification of node-level signal status for outages exceeding 24 hours.",
+          "Dispatch technicians to confirmed fiber/network node failure locations.",
+          "Document and share resolution success cases to standardize response protocols."
+        ],
+        "priority": "HIGH"
+      },
+      "evidence": [
+        {
+          "source_layer": "runbooks",
+          "document_id": "DOC-RUNBOOK-NETWORK-001_chunk0",
+          "excerpt": "When multiple customers in the same area report internet down for more than a day, first check node-level signal status. A 0% signal reading combined with clustered complaints in one area indicates a fiber/network node failure, not an individual cust...",
+          "retrieval_score": 1.136,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "policies",
+          "document_id": "DOC-POLICY-PDF-CUSTOMER_COMPLAINT_POLICY_KNOWLEDGEBASE_RAG.PDF_chunk9",
+          "excerpt": "SIM/APN misconfiguration.\nHistorical Evidence (sample, de-identified, dataset-derived):\n• “and how do you propose we do that”\n• “i have sent several private messages and no one is responding as usual”\n• “is the worst customer service”\nApplicable Poli...",
+          "retrieval_score": 0.797,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "customer_cases",
+          "document_id": "DOC-CASE-CONV-1521_chunk0",
+          "excerpt": "Customer complaint CONV-1521: seems like my problem has been resolved, the technicians you sent to the house were very capable and surpassed expectations...",
+          "retrieval_score": 0.683,
+          "confidence": 0.85
+        }
+      ],
+      "grounded": true,
+      "confidence_score": 0.949999988079071
+    }
+  },
+  {
+    "id": "ad26a84c-af13-453f-a59e-cd89eb4c8fc9",
+    "timestamp": "2026-08-18T15:57:43.735553+00:00",
+    "query": "what is our refund policy for service delays?",
+    "response": {
+      "query": "what is our refund policy for service delays?",
+      "query_type": "policy",
+      "target_layers": [
+        "policies"
+      ],
+      "answer": {
+        "executive_summary": "ANSWER: The refund policy for service delays is not specified in the available evidence. Please refer to the relevant policy document or escalate the query for further details.\n\nROOT CAUSE: Evidence does not include specific refund policy details for service delays.\n\nRECOMMENDED ACTIONS:\n1. Escalate the query to customer relations for policy clarification.\n2. Check the full customer complaint policy document for refund details.\n3. Document this gap for future policy updates.",
+        "key_findings": [],
+        "root_causes": [
+          "Evidence does not include specific refund policy details for service delays."
+        ],
+        "recommendations": [
+          "Escalate the query to customer relations for policy clarification.",
+          "Check the full customer complaint policy document for refund details.",
+          "Document this gap for future policy updates."
+        ],
+        "priority": "HIGH"
+      },
+      "evidence": [
+        {
+          "source_layer": "policies",
+          "document_id": "DOC-POLICY-PDF-CUSTOMER_COMPLAINT_POLICY_KNOWLEDGEBASE_RAG.PDF_chunk17",
+          "excerpt": "route/replacement bus service details.\nEscalation:  Escalate to Network Operations if infrastructure fault; escalate to customer relations for repeated/chronic \ndelays on same route (pattern of 3+ complaints).\n2. Ticketing — Fare Dispute / Booking Er...",
+          "retrieval_score": 1.16,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "policies",
+          "document_id": "DOC-POLICY-PDF-CUSTOMER_COMPLAINT_POLICY_KNOWLEDGEBASE_RAG.PDF_chunk27",
+          "excerpt": "Historical Evidence (sample, de-identified, dataset-derived):\n• “can i get help already??”\n• “so, what's the november ps plus free game?”\n• “it was when i would go to download it. i just waited a…”\nApplicable Policy / Rule:  Platform digital storefro...",
+          "retrieval_score": 1.091,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "policies",
+          "document_id": "DOC-POLICY-PDF-CUSTOMER_COMPLAINT_POLICY_KNOWLEDGEBASE_RAG.PDF_chunk16",
+          "excerpt": "journey.\nRoot Cause:  Signal failure, infrastructure fault (Network Rail/Network Owner), staff shortage, or planned engineering \nworks.\nHistorical Evidence (sample, de-identified, dataset-derived):\n• “my colleagues for more info on how this is affect...",
+          "retrieval_score": 0.98,
+          "confidence": 0.85
+        }
+      ],
+      "grounded": true,
+      "confidence_score": 0.9
+    }
+  },
+  {
+    "id": "f83ad913-e6cc-4c62-946d-1d7179447f15",
+    "timestamp": "2026-08-18T15:57:37.421842+00:00",
+    "query": "why are account complaints increasing?",
+    "response": {
+      "query": "why are account complaints increasing?",
+      "query_type": "customer_complaint",
+      "target_layers": [
+        "customer_cases",
+        "conversations",
+        "analytics_snapshots",
+        "issue_clusters"
+      ],
+      "answer": {
+        "executive_summary": "ANSWER: Account complaints are increasing due to unresolved billing discrepancies, account linking errors, and unclear disconnection processes.\n\nROOT CAUSE: Customers are facing issues with incorrect post-disconnection billing, account linking errors, and unclear communication regarding account status changes.\n\nRECOMMENDED ACTIONS:\n1. Investigate and resolve billing discrepancies for accounts disconnected prior to the billing cycle.\n2. Address account linking errors by troubleshooting and updating the account linking system.\n3. Improve communication regarding account status changes and billing timelines post-disconnection.",
+        "key_findings": [],
+        "root_causes": [
+          "Customers are facing issues with incorrect post-disconnection billing, account linking errors, and unclear communication regarding account status changes."
+        ],
+        "recommendations": [
+          "Investigate and resolve billing discrepancies for accounts disconnected prior to the billing cycle.",
+          "Address account linking errors by troubleshooting and updating the account linking system.",
+          "Improve communication regarding account status changes and billing timelines post-disconnection."
+        ],
+        "priority": "MEDIUM"
+      },
+      "evidence": [
+        {
+          "source_layer": "customer_cases",
+          "document_id": "DOC-CASE-CONV-1424_chunk0",
+          "excerpt": "Customer complaint CONV-1424: why am i still receiving a bill for oct when i disconnected by account on sept 20th? pls advise &amp; reverse the charges....",
+          "retrieval_score": 0.732,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "customer_cases",
+          "document_id": "DOC-CASE-CONV-710_chunk0",
+          "excerpt": "Customer complaint CONV-710: why are my i’s question marks ?...",
+          "retrieval_score": 0.722,
+          "confidence": 0.85
+        },
+        {
+          "source_layer": "customer_cases",
+          "document_id": "DOC-CASE-CONV-600_chunk0",
+          "excerpt": "Customer complaint CONV-600: hi - are you receiving an error message when trying to link the account?...",
+          "retrieval_score": 0.697,
+          "confidence": 0.85
+        }
+      ],
+      "grounded": true,
+      "confidence_score": 0.5600000023841858
+    }
+  }
+]

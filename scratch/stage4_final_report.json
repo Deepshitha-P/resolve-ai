@@ -1,0 +1,8 @@
+{
+  "nlp_output_row_count": 1898083,
+  "parquet_validity": "VALID (starts with PAR1, ends with PAR1, ParquetFile opens cleanly)",
+  "execution_time_seconds": 551.46,
+  "peak_memory_mb": 405.56,
+  "duplicate_count": 0,
+  "checkpoint_status": "COMPLETED"
+}

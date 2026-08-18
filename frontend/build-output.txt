@@ -1,0 +1,41 @@
+﻿
+> resolve-ai-frontend-new@0.1.0 build
+> tsc -b && vite build
+
+src/components/pain-points/PainPointCard.tsx(52,45): error TS2322: Type 'string' is not assignable to type 'BadgeTone | undefined'.
+src/components/pain-points/PainPointCard.tsx(53,35): error TS2322: Type 'string' is not assignable to type 'BadgeTone | undefined'.
+src/components/pain-points/PainPointCard.tsx(79,42): error TS2322: Type 'string' is not assignable to type 'BadgeTone | undefined'.
+src/features/pain-points/PainPointsPage.tsx(46,11): error TS2322: Type '{ label: string; options: readonly ["All categories", "Service Speed", "Billing", "Delivery", "Product Quality", "Account Access", "Refunds", "Technical"]; value: string; onChange: Dispatch<SetStateAction<...>>; }' is not assignable to type 'IntrinsicAttributes & FilterBarProps'.
+  Property 'label' does not exist on type 'IntrinsicAttributes & FilterBarProps'.
+src/features/pain-points/PainPointsPage.tsx(53,13): error TS2322: Type '{ label: string; options: readonly ["All severities", "critical", "high", "medium"]; value: string; onChange: Dispatch<SetStateAction<string>>; }' is not assignable to type 'IntrinsicAttributes & FilterBarProps'.
+  Property 'label' does not exist on type 'IntrinsicAttributes & FilterBarProps'.
+src/features/pain-points/PainPointsPage.tsx(59,13): error TS2322: Type '{ label: string; options: readonly ["All companies", "Northwind Commerce", "BluePeak", "Aster Labs", "Helio Retail"]; value: string; onChange: Dispatch<SetStateAction<string>>; }' is not assignable to type 'IntrinsicAttributes & FilterBarProps'.
+  Property 'label' does not exist on type 'IntrinsicAttributes & FilterBarProps'.
+src/features/pain-points/PainPointsPage.tsx(65,13): error TS2322: Type '{ label: string; options: readonly ["All segments", "Enterprise", "SMB", "Consumer", "New customer"]; value: string; onChange: Dispatch<SetStateAction<string>>; }' is not assignable to type 'IntrinsicAttributes & FilterBarProps'.
+  Property 'label' does not exist on type 'IntrinsicAttributes & FilterBarProps'.
+src/features/pain-points/PainPointsPage.tsx(75,46): error TS2322: Type 'number' is not assignable to type 'string'.
+src/features/pain-points/PainPointsPage.tsx(75,81): error TS2322: Type 'number' is not assignable to type '"up" | "down" | "neutral"'.
+src/features/pain-points/PainPointsPage.tsx(76,45): error TS2322: Type 'number' is not assignable to type 'string'.
+src/features/pain-points/PainPointsPage.tsx(76,67): error TS2322: Type 'number' is not assignable to type '"up" | "down" | "neutral"'.
+src/features/pain-points/PainPointsPage.tsx(77,45): error TS2322: Type 'number' is not assignable to type 'string'.
+src/features/pain-points/PainPointsPage.tsx(78,42): error TS2322: Type 'number' is not assignable to type 'string'.
+src/features/pain-points/PainPointsPage.tsx(78,71): error TS2322: Type 'number' is not assignable to type '"up" | "down" | "neutral"'.
+src/features/voice-of-customer/VoiceOfCustomerPage.tsx(25,25): error TS2323: Cannot redeclare exported variable 'default'.
+src/features/voice-of-customer/VoiceOfCustomerPage.tsx(25,25): error TS2393: Duplicate function implementation.
+src/features/voice-of-customer/VoiceOfCustomerPage.tsx(48,11): error TS2322: Type '{ label: string; options: readonly ["All sentiments", "positive", "neutral", "negative"]; value: string; onChange: Dispatch<SetStateAction<string>>; }' is not assignable to type 'IntrinsicAttributes & FilterBarProps'.
+  Property 'label' does not exist on type 'IntrinsicAttributes & FilterBarProps'.
+src/features/voice-of-customer/VoiceOfCustomerPage.tsx(57,48): error TS2322: Type 'number' is not assignable to type 'string'.
+src/features/voice-of-customer/VoiceOfCustomerPage.tsx(57,105): error TS2322: Type 'number' is not assignable to type '"up" | "down" | "neutral"'.
+src/features/voice-of-customer/VoiceOfCustomerPage.tsx(58,45): error TS2322: Type 'number' is not assignable to type 'string'.
+src/features/voice-of-customer/VoiceOfCustomerPage.tsx(59,45): error TS2322: Type 'number' is not assignable to type 'string'.
+src/features/voice-of-customer/VoiceOfCustomerPage.tsx(59,90): error TS2322: Type 'number' is not assignable to type '"up" | "down" | "neutral"'.
+src/features/voice-of-customer/VoiceOfCustomerPage.tsx(60,46): error TS2322: Type 'number' is not assignable to type 'string'.
+src/features/voice-of-customer/VoiceOfCustomerPage.tsx(97,14): error TS2741: Property 'channel' is missing in type '{ quote: string; sentiment: VocSentiment; theme: string; segment: string; source: string; date: string; key: number; }' but required in type 'CustomerQuoteProps'.
+src/features/voice-of-customer/VoiceOfCustomerPage.tsx(133,92): error TS2322: Type 'string' is not assignable to type '"medium" | "critical" | "high"'.
+src/features/voice-of-customer/VoiceOfCustomerPage.tsx(141,25): error TS2323: Cannot redeclare exported variable 'default'.
+src/features/voice-of-customer/VoiceOfCustomerPage.tsx(141,25): error TS2393: Duplicate function implementation.
+src/features/voice-of-customer/VoiceOfCustomerPage.tsx(143,112): error TS2304: Cannot find name 'Badge'.
+src/features/voice-of-customer/VoiceOfCustomerPage.tsx(145,10): error TS2552: Cannot find name 'voiceOfCustomerThemes'. Did you mean 'VoiceOfCustomerPage'?
+src/features/voice-of-customer/VoiceOfCustomerPage.tsx(145,37): error TS7006: Parameter 'theme' implicitly has an 'any' type.
+src/features/voice-of-customer/VoiceOfCustomerPage.tsx(149,16): error TS2304: Cannot find name 'Badge'.
+src/features/voice-of-customer/VoiceOfCustomerPage.tsx(155,34): error TS7006: Parameter 'quote' implicitly has an 'any' type.

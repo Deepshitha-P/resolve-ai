@@ -1,0 +1,302 @@
+git=== PAGE 1 ===
+RootIQ UC18 — Company Policy Knowledge
+ Families
+ Policy-family blueprint for the RAG knowledge layer
+Important: These are company-specific policy families designed to organize evidence from the TWCS customer-support dataset.
+They are not claims that every listed rule is an official current company policy. TWCS-derived rules must be stored as
+historical_inference with authoritativeness = inferred unless an authoritative company policy document is later supplied.
+Recommended RAG structure: company → policy family → rule → conditions → thresholds/time constraints → product → region →
+evidence → confidence → provenance.
+1. AmazonHelp
+Policy Family
+Complaint / Rule Coverage
+Orders & Delivery
+late/missing delivery, tracking, delivery estimates, damaged packages, delivery
+exceptions
+Returns & Refunds
+return eligibility, refund eligibility, refund timing, partial refunds, exceptions
+Payments & Billing
+duplicate charges, failed payments, payment methods, billing disputes
+Account & Prime
+account access, verification, Prime eligibility, membership cancellation
+Product & Replacement
+defective/damaged products, replacements, warranty, troubleshooting
+2. AppleSupport
+Policy Family
+Complaint / Rule Coverage
+Device & Hardware
+iPhone/iPad/Mac problems, damage, hardware troubleshooting
+Apple ID & Account
+authentication, locked accounts, passwords, verification
+Purchases & Billing
+App Store purchases, duplicate charges, payment problems
+Subscriptions & Refunds
+Apple Music, subscriptions, cancellation, refund requests
+Repairs & Warranty
+repair eligibility, replacement, warranty and service requirements
+3. Uber_Support
+Policy Family
+Complaint / Rule Coverage
+Ride & Driver Issues
+wrong route, driver problems, ride cancellation, trip issues
+Payments & Fare
+incorrect fare, duplicate charge, payment failure, fare disputes
+Cancellation & Refunds
+cancellation fees, refund eligibility, refund processing
+Account & Safety
+account access, identity verification, safety incidents
+Uber Services & Promotions
+passes, credits, promotions, eligibility, service-specific issues
+4. SpotifyCares
+
+
+=== PAGE 2 ===
+Policy Family
+Complaint / Rule Coverage
+Subscription & Billing
+Premium charges, duplicate billing, failed payment
+Cancellation & Refunds
+subscription cancellation and refund eligibility
+Account & Login
+account access, password and account recovery
+Student & Promotional Plans
+student eligibility, promotional offers, plan requirements
+App & Playback
+playback, downloads, device compatibility and technical issues
+5. Delta
+Policy Family
+Complaint / Rule Coverage
+Flight Booking & Changes
+booking, changes, cancellation and rebooking
+Baggage
+lost, delayed, damaged baggage and baggage limits
+Refunds & Compensation
+ticket refunds, cancellation refunds and disruption compensation
+Flight Disruptions
+delays, cancellations, missed connections and rebooking
+Travel Requirements
+check-in, documents, seats, airport and travel requirements
+6. AmericanAir
+Policy Family
+Complaint / Rule Coverage
+Booking & Tickets
+ticket purchase, changes and cancellation
+Refunds & Credits
+eligible refunds, travel credits and refund processing
+Baggage
+baggage fees, lost/damaged/delayed baggage
+Flight Disruption
+cancellations, delays and rebooking
+Travel & Check-in
+check-in, seats, boarding and travel requirements
+7. British_Airways
+Policy Family
+Complaint / Rule Coverage
+Booking & Fare Rules
+booking, fare restrictions and changes
+Cancellation & Refunds
+cancellation windows, refunds and fees
+Baggage
+baggage allowance, damage, loss and delay
+Seats & Boarding
+seat selection, check-in and boarding
+Flight Disruption
+delays, cancellations, rebooking and compensation
+8. SouthwestAir
+
+
+=== PAGE 3 ===
+Policy Family
+Complaint / Rule Coverage
+Reservations & Changes
+booking, changes and fare differences
+Cancellation & Refunds
+cancellation and refundable/non-refundable fares
+Baggage
+checked bags, baggage limits, lost/damaged baggage
+Flight Disruptions
+delays, cancellations and rebooking
+Check-in & Boarding
+EarlyBird, boarding and airport requirements
+9. Tesco
+Policy Family
+Complaint / Rule Coverage
+Orders & Delivery
+grocery delivery, missing/late items
+Returns & Refunds
+refunds, returns and refund timing
+Payments & Billing
+payment problems and incorrect charges
+Products & Quality
+damaged, incorrect or expired products
+Account & Loyalty
+account and Clubcard issues
+10. TMobileHelp
+Policy Family
+Complaint / Rule Coverage
+Plans & Billing
+plan charges, billing disputes and payment
+Devices & Upgrades
+device eligibility, upgrades and device problems
+Promotions
+BOGO, trade-in and promotional eligibility
+Account & Authentication
+account access, verification and account changes
+Network & Service
+connectivity, outages and service problems
+11. Comcast
+Policy Family
+Complaint / Rule Coverage
+Internet & Network
+outages, slow internet and connectivity
+TV & Streaming
+channels and service problems
+Billing & Charges
+incorrect charges and fees
+Equipment & Installation
+modem/router/equipment and technician visits
+Account & Cancellation
+account changes, verification and cancellation
+12. Ask_Spectrum
+
+
+=== PAGE 4 ===
+Policy Family
+Complaint / Rule Coverage
+Internet & Network
+connectivity, outages and performance
+TV & Services
+TV/service availability and service issues
+Billing & Fees
+billing disputes, charges and fees
+Account & Authentication
+identity verification and account changes
+Cancellation & Equipment
+cancellation, equipment return and service closure
+13. XboxSupport
+Policy Family
+Complaint / Rule Coverage
+Account & Security
+login, account access and bans
+Purchases & Refunds
+purchases and refund requests
+Subscriptions
+Game Pass, cancellation and subscription issues
+Games & Digital Content
+downloads, codes and digital purchases
+Console & Hardware
+controller, console and troubleshooting
+14. AskPlayStation
+Policy Family
+Complaint / Rule Coverage
+Account & Security
+login, bans and account recovery
+Purchases & Refunds
+digital purchases and refund eligibility
+Subscriptions
+PlayStation Plus and cancellation
+Codes & Store
+regional codes and redemption
+Console & Hardware
+controller, console and technical problems
+15. Sprint
+Policy Family
+Complaint / Rule Coverage
+Plans & Billing
+plan charges, billing disputes and payments
+Devices & Upgrades
+devices, upgrades and device problems
+Trade-in & Promotions
+trade-ins and promotional eligibility
+Account & Authentication
+account access and verification
+Network & Service
+connectivity, outages and service problems
+16. Hulu
+
+
+=== PAGE 5 ===
+Policy Family
+Complaint / Rule Coverage
+Subscription & Billing
+subscription charges, payment and billing
+Cancellation & Refunds
+cancellation and refund eligibility
+Account & Eligibility
+account access and eligibility
+Live TV & Location
+home location and live-TV requirements
+App & Playback
+playback, device and technical issues
+17. Sainsburys
+Policy Family
+Complaint / Rule Coverage
+Orders & Delivery
+orders, delivery and missing items
+Returns & Refunds
+returns, refunds and refund timing
+Payments & Billing
+payment problems and incorrect charges
+Product Quality
+damaged, incorrect or expired products
+Account & Loyalty
+account and loyalty-program issues
+18. GWRHelp
+Policy Family
+Complaint / Rule Coverage
+Tickets & Booking
+ticket purchase, booking and fare rules
+Changes & Cancellation
+ticket changes and cancellation
+Refunds
+refund eligibility, fees and processing
+Delays & Compensation
+delay claims and compensation
+Travel & Rail Operations
+journey, station and operational issues
+19. ChipotleTweets
+Policy Family
+Complaint / Rule Coverage
+Food Orders
+online/in-store orders and order problems
+Missing/Incorrect Orders
+missing, incorrect or incomplete orders
+Refunds & Credits
+refunds, credits and order compensation
+Payments
+payment and checkout issues
+Restaurant & Service
+Complaints
+restaurant experience and service complaints
+20. VerizonSupport
+
+
+=== PAGE 6 ===
+Policy Family
+Complaint / Rule Coverage
+Plans & Billing
+plans, billing disputes and charges
+Network & Connectivity
+network performance and outages
+Devices & Upgrades
+device issues and upgrades
+Promotions
+promotion and eligibility rules
+Account & Authentication
+account access and verification
+
+
+=== PAGE 7 ===
+How these policy families should enter RootIQ RAG
+1. Evidence first: Extract rules only from actual historical evidence. Do not turn complaints such as 'my refund is late' into policies.
+2. Company scope: Attach each candidate to the support handle/company that produced the evidence.
+3. Product and region: Preserve product/region only when reliably supported by source data. Otherwise use null/unknown rather
+than guessing.
+4. Contradictions: If historical evidence contains conflicting rules (for example 7 days versus 14 days), preserve both candidates and
+mark the group as conflicting_evidence.
+5. Policy versus runbook: Policies describe what is allowed/required/expected. Runbooks describe what support should do.
+6. Trust: Historical TWCS rules should have lower trust than future authoritative company policy/help-center documents.
+Suggested policy document fields
+document_id, document_type = policy, company, policy_type, category, subcategory, product, region, rule, conditions, thresholds,
+time_constraints, exceptions, supporting_evidence, source_conversation_ids, source_timestamps, evidence_count,
+distinct_source_count, confidence, provenance, authoritativeness, model_version, created_at.

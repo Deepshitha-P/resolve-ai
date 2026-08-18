@@ -1,0 +1,97 @@
+{
+  "audit_passed": true,
+  "total_checks": 15,
+  "passed_checks": 15,
+  "checks": [
+    {
+      "item": 1,
+      "title": "NLP v1.2 Unchanged & Locked",
+      "status": "PASS",
+      "details": "model_version=v1.2-local, subcategory=internet_down, problem_type=service_failure"
+    },
+    {
+      "item": 2,
+      "title": "Stage 3 Customer/Company Separation",
+      "status": "PASS",
+      "details": "Customer turns explicitly filtered before NLP analysis."
+    },
+    {
+      "item": 3,
+      "title": "Stage 5 Analytics Semantics Unchanged",
+      "status": "PASS",
+      "details": "DuckDB SQL category/sentiment analytics intact."
+    },
+    {
+      "item": 4,
+      "title": "Stage 6 Temporal Logic Unchanged",
+      "status": "PASS",
+      "details": "Z-score spike detection and daily volume aggregation intact."
+    },
+    {
+      "item": 5,
+      "title": "Stage 7 Clustering Methodology Unchanged",
+      "status": "PASS",
+      "details": "TF-IDF + KMeans clustering & 0-100 pain point score formula intact."
+    },
+    {
+      "item": 6,
+      "title": "Stage 9 Produces All 9 Typed Knowledge Layers",
+      "status": "PASS",
+      "details": "All 9 knowledge layers present in stage09_knowledge_memory.py: ['customer_cases', 'conversations', 'resolved_historical_cases', 'issue_clusters', 'temporal_events', 'analytics_snapshots', 'policies', 'runbooks', 'historical_insights']"
+    },
+    {
+      "item": 7,
+      "title": "Stages 10\u201317 Consume Typed Layers Correctly",
+      "status": "PASS",
+      "details": "LayeredEmbedder and LayeredVectorDB interface present."
+    },
+    {
+      "item": 8,
+      "title": "Query Router Layer Selection",
+      "status": "PASS",
+      "details": "query_type=policy, selected_layers=['policies']"
+    },
+    {
+      "item": 9,
+      "title": "Retrieval Out-Of-Core & Layer Pruned (No Full RAM Load)",
+      "status": "PASS",
+      "details": "hybrid_search_layers prunes document search to router-selected layers."
+    },
+    {
+      "item": 10,
+      "title": "Evidence Preserves ID, Layer, Excerpt, Score",
+      "status": "PASS",
+      "details": "Fields: ['source_id', 'doc_id', 'layer', 'source_type', 'title', 'excerpt', 'text', 'relevance_score', 'metadata']"
+    },
+    {
+      "item": 11,
+      "title": "Stage 17 Non-Fabrication & Insufficient Evidence Fallback",
+      "status": "PASS",
+      "details": "Status: insufficient_evidence"
+    },
+    {
+      "item": 12,
+      "title": "Historical Insights Stored Separately From Customer Cases",
+      "status": "PASS",
+      "details": "Insights persisted under data/knowledge/historical_insights/ and outputs/insight_memory.json."
+    },
+    {
+      "item": 13,
+      "title": "No External API Dependency Introduced",
+      "status": "PASS",
+      "details": "USE_REAL_LLM default is False; system operates 100% offline."
+    },
+    {
+      "item": 14,
+      "title": "Checkpoint/Resume Behavior Safe For Full Dataset",
+      "status": "PASS",
+      "details": "CheckpointManager handles stage-level completion state persistence."
+    },
+    {
+      "item": 15,
+      "title": "2.8M Configuration Points To Real Production CSV",
+      "status": "PASS",
+      "details": "Path: data/raw/twcs_cleaned.csv (Size: 752.16 MB)"
+    }
+  ]
+}

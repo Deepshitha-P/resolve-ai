@@ -1,0 +1,67 @@
+{
+  "total_knowledge_documents": 0,
+  "execution_time_seconds": 49.92,
+  "peak_memory_mb": 187.37,
+  "layers": {
+    "customer_cases": {
+      "record_count": 0,
+      "file_size_bytes": 0,
+      "file_size_mb": 0.0,
+      "sample_doc": null
+    },
+    "conversations": {
+      "record_count": 0,
+      "file_size_bytes": 0,
+      "file_size_mb": 0.0,
+      "sample_doc": null
+    },
+    "resolved_historical_cases": {
+      "record_count": 0,
+      "file_size_bytes": 0,
+      "file_size_mb": 0.0,
+      "sample_doc": null
+    },
+    "issue_clusters": {
+      "record_count": 0,
+      "file_size_bytes": 0,
+      "file_size_mb": 0.0,
+      "sample_doc": null
+    },
+    "temporal_events": {
+      "record_count": 0,
+      "file_size_bytes": 0,
+      "file_size_mb": 0.0,
+      "sample_doc": null
+    },
+    "analytics_snapshots": {
+      "record_count": 0,
+      "file_size_bytes": 0,
+      "file_size_mb": 0.0,
+      "sample_doc": null
+    },
+    "policies": {
+      "record_count": 0,
+      "file_size_bytes": 0,
+      "file_size_mb": 0.0,
+      "sample_doc": null
+    },
+    "runbooks": {
+      "record_count": 0,
+      "file_size_bytes": 0,
+      "file_size_mb": 0.0,
+      "sample_doc": null
+    },
+    "historical_insights": {
+      "record_count": 0,
+      "file_size_bytes": 0,
+      "file_size_mb": 0.0,
+      "sample_doc": null
+    }
+  },
+  "resolved_vs_unresolved": {
+    "conversations_total": 0,
+    "resolved_cases": 0,
+    "unresolved_cases": 0,
+    "resolution_rate_pct": 0.0
+  }
+}

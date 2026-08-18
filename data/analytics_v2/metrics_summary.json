@@ -1,0 +1,425 @@
+{
+  "dataset_metrics": {
+    "total_conversations": 710,
+    "company_responded_conversations": 346,
+    "company_response_rate": 0.4873,
+    "negative_sentiment_rate": 0.2577,
+    "high_severity_rate": 0.007,
+    "average_sentiment": -0.0317
+  },
+  "response_time_metrics": {
+    "valid_measured_cases": 11,
+    "coverage_percentage": 1.55,
+    "unknown_percentage": 98.45,
+    "average_seconds": 4884.91,
+    "median_seconds": 944.0,
+    "p90_seconds": 8208.0,
+    "p95_seconds": 17867.0,
+    "average_minutes": 81.42,
+    "median_minutes": 15.73,
+    "p90_minutes": 136.8,
+    "p95_minutes": 297.78,
+    "formula": "first_response_time = timestamp(first_company_turn) - timestamp(first_customer_turn)"
+  },
+  "first_contact_resolution": {
+    "fcr_cases": 62,
+    "total_conversations": 710,
+    "fcr_rate_overall": 0.0873,
+    "fcr_rate_responded_threads": 0.1792,
+    "formula": "customer_turn_count == 1 AND has_company_response == true",
+    "coverage_percentage": 100.0
+  },
+  "escalation_metrics": {
+    "escalated_cases": 46,
+    "total_conversations": 710,
+    "escalation_rate": 0.0648,
+    "formula": "len(escalation_signals) > 0",
+    "coverage_percentage": 100.0
+  },
+  "reopen_metrics": {
+    "reopened_cases": 34,
+    "total_conversations": 710,
+    "reopen_rate": 0.0479,
+    "formula": "repeat_contact_signals == true",
+    "coverage_percentage": 100.0
+  },
+  "csat_proxy": {
+    "label": "CSAT Proxy",
+    "is_actual_csat_survey": false,
+    "overall_csat_proxy_score": 47.62,
+    "formula": "100 * clamp(0.5 + 0.35 * sentiment + 0.15 * is_fcr - 0.25 * is_escalated - 0.20 * is_reopen, 0, 1)",
+    "csat_trajectory_days_count": 1
+  },
+  "product_analysis": {
+    "product_mention_cases": 58,
+    "unique_normalized_products": 3,
+    "coverage_percentage": 8.17,
+    "unknown_percentage": 91.83,
+    "top_products": [
+      {
+        "product_name": "app",
+        "total_cases": 21,
+        "responded_cases": 9,
+        "fcr_rate": 0.0952,
+        "escalation_rate": 0.0476,
+        "reopen_rate": 0.0,
+        "avg_response_time_sec": 689.0,
+        "avg_sentiment": -0.0333,
+        "high_severity_cases": 0,
+        "csat_proxy": 49.07
+      },
+      {
+        "product_name": "phone",
+        "total_cases": 20,
+        "responded_cases": 9,
+        "fcr_rate": 0.15,
+        "escalation_rate": 0.1,
+        "reopen_rate": 0.0,
+        "avg_response_time_sec": 0.0,
+        "avg_sentiment": -0.029,
+        "high_severity_cases": 1,
+        "csat_proxy": 48.74
+      },
+      {
+        "product_name": "flight",
+        "total_cases": 17,
+        "responded_cases": 2,
+        "fcr_rate": 0.0588,
+        "escalation_rate": 0.1765,
+        "reopen_rate": 0.0,
+        "avg_response_time_sec": 0.0,
+        "avg_sentiment": -0.0371,
+        "high_severity_cases": 0,
+        "csat_proxy": 45.17
+      }
+    ]
+  },
+  "region_analysis": {
+    "region_mention_cases": 10,
+    "unique_normalized_regions": 1,
+    "coverage_percentage": 1.41,
+    "unknown_percentage": 98.59,
+    "top_regions": [
+      {
+        "region_name": "store",
+        "total_cases": 10,
+        "responded_cases": 5,
+        "fcr_rate": 0.1,
+        "escalation_rate": 0.1,
+        "reopen_rate": 0.0,
+        "avg_response_time_sec": 0.0,
+        "avg_sentiment": 0.014,
+        "csat_proxy": 49.49
+      }
+    ]
+  },
+  "emerging_issues": [
+    {
+      "category": "account",
+      "recent_7d_volume": 5,
+      "prior_7d_volume": 0,
+      "growth_rate_pct": 500.0,
+      "emerging_issue_score": 5.02
+    },
+    {
+      "category": "other",
+      "recent_7d_volume": 4,
+      "prior_7d_volume": 0,
+      "growth_rate_pct": 400.0,
+      "emerging_issue_score": 4.02
+    },
+    {
+      "category": "delivery",
+      "recent_7d_volume": 3,
+      "prior_7d_volume": 0,
+      "growth_rate_pct": 300.0,
+      "emerging_issue_score": 3.01
+    },
+    {
+      "category": "service_outage",
+      "recent_7d_volume": 0,
+      "prior_7d_volume": 0,
+      "growth_rate_pct": 0.0,
+      "emerging_issue_score": 0.0
+    },
+    {
+      "category": "technical_support",
+      "recent_7d_volume": 0,
+      "prior_7d_volume": 0,
+      "growth_rate_pct": 0.0,
+      "emerging_issue_score": 0.0
+    }
+  ],
+  "category_breakdown": [
+    {
+      "category_name": "other",
+      "total_cases": 304,
+      "responded_cases": 167,
+      "fcr_rate": 0.0954,
+      "escalation_rate": 0.0033,
+      "reopen_rate": 0.0493,
+      "avg_response_time_sec": 5458.9,
+      "median_response_time_sec": 816.5,
+      "p90_response_time_sec": 14003.4,
+      "avg_sentiment": -0.0068,
+      "csat_proxy": 50.12
+    },
+    {
+      "category_name": "technical_support",
+      "total_cases": 115,
+      "responded_cases": 65,
+      "fcr_rate": 0.0696,
+      "escalation_rate": 0.1913,
+      "reopen_rate": 0.087,
+      "avg_response_time_sec": 7761.0,
+      "median_response_time_sec": 7761.0,
+      "p90_response_time_sec": 7761.0,
+      "avg_sentiment": -0.063,
+      "csat_proxy": 42.32
+    },
+    {
+      "category_name": "delivery",
+      "total_cases": 48,
+      "responded_cases": 18,
+      "fcr_rate": 0.1042,
+      "escalation_rate": 0.0625,
+      "reopen_rate": 0.0417,
+      "avg_response_time_sec": 0.0,
+      "median_response_time_sec": 0.0,
+      "p90_response_time_sec": 0.0,
+      "avg_sentiment": -0.0469,
+      "csat_proxy": 47.53
+    },
+    {
+      "category_name": "account",
+      "total_cases": 41,
+      "responded_cases": 25,
+      "fcr_rate": 0.122,
+      "escalation_rate": 0.0488,
+      "reopen_rate": 0.0244,
+      "avg_response_time_sec": 119.0,
+      "median_response_time_sec": 119.0,
+      "p90_response_time_sec": 119.0,
+      "avg_sentiment": -0.0434,
+      "csat_proxy": 48.6
+    },
+    {
+      "category_name": "billing",
+      "total_cases": 34,
+      "responded_cases": 14,
+      "fcr_rate": 0.0882,
+      "escalation_rate": 0.0294,
+      "reopen_rate": 0.0882,
+      "avg_response_time_sec": 2183.0,
+      "median_response_time_sec": 2183.0,
+      "p90_response_time_sec": 2183.0,
+      "avg_sentiment": -0.0247,
+      "csat_proxy": 47.96
+    }
+  ],
+  "category_analysis": {
+    "category_mention_cases": 406,
+    "unique_normalized_categories": 14,
+    "coverage_percentage": 57.18,
+    "unknown_percentage": 42.82,
+    "top_categories": [
+      {
+        "category_name": "technical_support",
+        "total_cases": 115,
+        "responded_cases": 65,
+        "fcr_rate": 0.0696,
+        "escalation_rate": 0.1913,
+        "reopen_rate": 0.087,
+        "avg_response_time_sec": 7761.0,
+        "median_response_time_sec": 7761.0,
+        "p90_response_time_sec": 7761.0,
+        "avg_sentiment": -0.063,
+        "csat_proxy": 42.32
+      },
+      {
+        "category_name": "delivery",
+        "total_cases": 48,
+        "responded_cases": 18,
+        "fcr_rate": 0.1042,
+        "escalation_rate": 0.0625,
+        "reopen_rate": 0.0417,
+        "avg_response_time_sec": 0.0,
+        "median_response_time_sec": 0.0,
+        "p90_response_time_sec": 0.0,
+        "avg_sentiment": -0.0469,
+        "csat_proxy": 47.53
+      },
+      {
+        "category_name": "account",
+        "total_cases": 41,
+        "responded_cases": 25,
+        "fcr_rate": 0.122,
+        "escalation_rate": 0.0488,
+        "reopen_rate": 0.0244,
+        "avg_response_time_sec": 119.0,
+        "median_response_time_sec": 119.0,
+        "p90_response_time_sec": 119.0,
+        "avg_sentiment": -0.0434,
+        "csat_proxy": 48.6
+      },
+      {
+        "category_name": "billing",
+        "total_cases": 34,
+        "responded_cases": 14,
+        "fcr_rate": 0.0882,
+        "escalation_rate": 0.0294,
+        "reopen_rate": 0.0882,
+        "avg_response_time_sec": 2183.0,
+        "median_response_time_sec": 2183.0,
+        "p90_response_time_sec": 2183.0,
+        "avg_sentiment": -0.0247,
+        "csat_proxy": 47.96
+      },
+      {
+        "category_name": "travel_flight",
+        "total_cases": 30,
+        "responded_cases": 6,
+        "fcr_rate": 0.0667,
+        "escalation_rate": 0.1,
+        "reopen_rate": 0.0333,
+        "avg_response_time_sec": 0.0,
+        "median_response_time_sec": 0.0,
+        "p90_response_time_sec": 0.0,
+        "avg_sentiment": -0.0433,
+        "csat_proxy": 46.32
+      },
+      {
+        "category_name": "device_hardware",
+        "total_cases": 25,
+        "responded_cases": 9,
+        "fcr_rate": 0.12,
+        "escalation_rate": 0.04,
+        "reopen_rate": 0.0,
+        "avg_response_time_sec": 0.0,
+        "median_response_time_sec": 0.0,
+        "p90_response_time_sec": 0.0,
+        "avg_sentiment": -0.0064,
+        "csat_proxy": 50.58
+      },
+      {
+        "category_name": "payment",
+        "total_cases": 24,
+        "responded_cases": 5,
+        "fcr_rate": 0.0417,
+        "escalation_rate": 0.0,
+        "reopen_rate": 0.0,
+        "avg_response_time_sec": 0.0,
+        "median_response_time_sec": 0.0,
+        "p90_response_time_sec": 0.0,
+        "avg_sentiment": -0.0292,
+        "csat_proxy": 49.6
+      },
+      {
+        "category_name": "store_operations",
+        "total_cases": 18,
+        "responded_cases": 10,
+        "fcr_rate": 0.0556,
+        "escalation_rate": 0.0556,
+        "reopen_rate": 0.0,
+        "avg_response_time_sec": 0.0,
+        "median_response_time_sec": 0.0,
+        "p90_response_time_sec": 0.0,
+        "avg_sentiment": -0.0028,
+        "csat_proxy": 49.35
+      },
+      {
+        "category_name": "complaint_followup",
+        "total_cases": 17,
+        "responded_cases": 7,
+        "fcr_rate": 0.1176,
+        "escalation_rate": 0.4706,
+        "reopen_rate": 0.0,
+        "avg_response_time_sec": 0.0,
+        "median_response_time_sec": 0.0,
+        "p90_response_time_sec": 0.0,
+        "avg_sentiment": -0.0641,
+        "csat_proxy": 37.76
+      },
+      {
+        "category_name": "network",
+        "total_cases": 16,
+        "responded_cases": 3,
+        "fcr_rate": 0.0,
+        "escalation_rate": 0.0625,
+        "reopen_rate": 0.0,
+        "avg_response_time_sec": 0.0,
+        "median_response_time_sec": 0.0,
+        "p90_response_time_sec": 0.0,
+        "avg_sentiment": -0.0481,
+        "csat_proxy": 46.75
+      },
+      {
+        "category_name": "service_outage",
+        "total_cases": 15,
+        "responded_cases": 4,
+        "fcr_rate": 0.0,
+        "escalation_rate": 0.0667,
+        "reopen_rate": 0.0667,
+        "avg_response_time_sec": 0.0,
+        "median_response_time_sec": 0.0,
+        "p90_response_time_sec": 0.0,
+        "avg_sentiment": -0.1853,
+        "csat_proxy": 40.51
+      },
+      {
+        "category_name": "feature_request",
+        "total_cases": 15,
+        "responded_cases": 11,
+        "fcr_rate": 0.2,
+        "escalation_rate": 0.0,
+        "reopen_rate": 0.0667,
+        "avg_response_time_sec": 0.0,
+        "median_response_time_sec": 0.0,
+        "p90_response_time_sec": 0.0,
+        "avg_sentiment": -0.048,
+        "csat_proxy": 49.99
+      },
+      {
+        "category_name": "refund",
+        "total_cases": 6,
+        "responded_cases": 1,
+        "fcr_rate": 0.0,
+        "escalation_rate": 0.3333,
+        "reopen_rate": 0.0,
+        "avg_response_time_sec": 0.0,
+        "median_response_time_sec": 0.0,
+        "p90_response_time_sec": 0.0,
+        "avg_sentiment": -0.1017,
+        "csat_proxy": 38.11
+      },
+      {
+        "category_name": "authentication",
+        "total_cases": 2,
+        "responded_cases": 1,
+        "fcr_rate": 0.0,
+        "escalation_rate": 0.0,
+        "reopen_rate": 0.0,
+        "avg_response_time_sec": 0.0,
+        "median_response_time_sec": 0.0,
+        "p90_response_time_sec": 0.0,
+        "avg_sentiment": -0.06,
+        "csat_proxy": 47.9
+      }
+    ]
+  },
+  "insight_feedback": {
+    "total_queries": 18,
+    "negative_queries": 0,
+    "escalated_queries": 18,
+    "avg_confidence": 0.6606,
+    "query_type_counts": {
+      "customer_complaint": 1,
+      "policy": 1,
+      "incident": 6,
+      "historical_precedent": 4,
+      "temporal_spike": 2,
+      "network_outage": 3,
+      "root_cause_investigation": 1
+    }
+  }
+}

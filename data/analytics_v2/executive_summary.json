@@ -1,0 +1,353 @@
+{
+  "rag_query_result": {
+    "query": "What is the operational performance summary, FCR rate, escalation rate, CSAT proxy score, product metrics, and regional impact from the analytics snapshots?",
+    "query_type": "kpi_metric",
+    "confidence_score": 0.42,
+    "evidence_chain": [
+      {
+        "source_id": "DOC-SNAPSHOT-ANALYTICS-V2",
+        "doc_id": "DOC-SNAPSHOT-ANALYTICS-V2",
+        "layer": "analytics_snapshots",
+        "source_type": "analytics_snapshots",
+        "title": "RootIQ UC18 Analytics V2 Enterprise Operational Summary",
+        "excerpt": "UC18 Analytics V2 Summary over 1,898,083 conversations: FCR Rate=11.27%, Escalation Rate=8.71%, Reopen Rate=6.12%, CSAT Proxy=47.08/100. Response Times: Avg=1401.2m, Median=56.0m, P90=1493.8m, P95=3045.7m. Top Product: phone (80,023 cases, CSAT Proxy",
+        "text": "UC18 Analytics V2 Summary over 1,898,083 conversations: FCR Rate=11.27%, Escalation Rate=8.71%, Reopen Rate=6.12%, CSAT Proxy=47.08/100. Response Times: Avg=1401.2m, Median=56.0m, P90=1493.8m, P95=3045.7m. Top Product: phone (80,023 cases, CSAT Proxy=46.28). Top Region: store (37,009 cases). Emerging Issue Category: other (growth rate 120.34%).",
+        "relevance_score": 0.85,
+        "metadata": {
+          "period": null,
+          "topic": null,
+          "total_conversations": 1898083,
+          "fcr_rate": 0.1127,
+          "escalation_rate": 0.0871,
+          "reopen_rate": 0.0612,
+          "csat_proxy": 47.08,
+          "avg_response_time_mins": 1401.25,
+          "product_coverage_pct": 12.7,
+          "region_coverage_pct": 2.54
+        }
+      },
+      {
+        "source_id": "SNAP-GLOBAL",
+        "doc_id": "SNAP-GLOBAL",
+        "layer": "analytics_snapshots",
+        "source_type": "analytics_snapshots",
+        "title": "Analytics Snapshot: global (all)",
+        "excerpt": "Global operational analytics snapshot: 1898083 total conversations analyzed. Top categories: {'delivery': 147696, 'refund': 18891, 'device_hardware': 75384, 'feature_request': 13040, 'billing': 77567, 'authentication': 12663, 'travel_flight': 95574, ",
+        "text": "Global operational analytics snapshot: 1898083 total conversations analyzed. Top categories: {'delivery': 147696, 'refund': 18891, 'device_hardware': 75384, 'feature_request': 13040, 'billing': 77567, 'authentication': 12663, 'travel_flight': 95574, 'complaint_followup': 44388, 'network': 61264, 'account': 89081, 'technical_support': 305899, 'service_outage': 36397, 'other': 763748, 'payment': 89805, 'store_operations': 66686}. Severity distribution: {'high': 24603, 'medium': 462106, 'critical': 537, 'low': 1410837}. Negative sentiment rate: 28.9%. Escalation rate: 8.7%.",
+        "relevance_score": 0.3037,
+        "metadata": {
+          "period": "global",
+          "topic": "all",
+          "total_conversations": null,
+          "fcr_rate": null,
+          "escalation_rate": null,
+          "reopen_rate": null,
+          "csat_proxy": null,
+          "avg_response_time_mins": null,
+          "product_coverage_pct": null,
+          "region_coverage_pct": null
+        }
+      },
+      {
+        "source_id": "SNAP-SPIKE-Global-other",
+        "doc_id": "SNAP-SPIKE-Global-other",
+        "layer": "analytics_snapshots",
+        "source_type": "analytics_snapshots",
+        "title": "Analytics Snapshot: daily (other)",
+        "excerpt": "Temporal spike detected: other complaints in Global reached 8645 on 2017-12-03, vs historical average of 982.94 (z-score 2.27). Trend: spiking.",
+        "text": "Temporal spike detected: other complaints in Global reached 8645 on 2017-12-03, vs historical average of 982.94 (z-score 2.27). Trend: spiking.",
+        "relevance_score": 0.005,
+        "metadata": {
+          "period": "daily",
+          "topic": "other",
+          "total_conversations": null,
+          "fcr_rate": null,
+          "escalation_rate": null,
+          "reopen_rate": null,
+          "csat_proxy": null,
+          "avg_response_time_mins": null,
+          "product_coverage_pct": null,
+          "region_coverage_pct": null
+        }
+      }
+    ],
+    "executive_report": null
+  },
+  "v2_metrics": {
+    "dataset_metrics": {
+      "total_conversations": 1898083,
+      "company_responded_conversations": 984551,
+      "company_response_rate": 0.5187,
+      "negative_sentiment_rate": 0.289,
+      "high_severity_rate": 0.013,
+      "average_sentiment": -0.0346
+    },
+    "response_time_metrics": {
+      "valid_measured_cases": 80434,
+      "coverage_percentage": 4.24,
+      "unknown_percentage": 95.76,
+      "average_seconds": 84074.99,
+      "median_seconds": 3363.0,
+      "p90_seconds": 89627.9,
+      "p95_seconds": 182739.35,
+      "average_minutes": 1401.25,
+      "median_minutes": 56.05,
+      "p90_minutes": 1493.8,
+      "p95_minutes": 3045.66,
+      "formula": "first_response_time = timestamp(first_company_turn) - timestamp(first_customer_turn)"
+    },
+    "first_contact_resolution": {
+      "fcr_cases": 213912,
+      "total_conversations": 1898083,
+      "fcr_rate_overall": 0.1127,
+      "fcr_rate_responded_threads": 0.2173,
+      "formula": "customer_turn_count == 1 AND has_company_response == true",
+      "coverage_percentage": 100.0
+    },
+    "escalation_metrics": {
+      "escalated_cases": 165333,
+      "total_conversations": 1898083,
+      "escalation_rate": 0.0871,
+      "formula": "len(escalation_signals) > 0",
+      "coverage_percentage": 100.0
+    },
+    "reopen_metrics": {
+      "reopened_cases": 116222,
+      "total_conversations": 1898083,
+      "reopen_rate": 0.0612,
+      "formula": "repeat_contact_signals == true",
+      "coverage_percentage": 100.0
+    },
+    "csat_proxy": {
+      "label": "CSAT Proxy",
+      "is_actual_csat_survey": false,
+      "overall_csat_proxy_score": 47.08,
+      "formula": "100 * clamp(0.5 + 0.35 * sentiment + 0.15 * is_fcr - 0.25 * is_escalated - 0.20 * is_reopen, 0, 1)",
+      "csat_trajectory_days_count": 112
+    },
+    "product_analysis": {
+      "product_mention_cases": 240990,
+      "unique_normalized_products": 12,
+      "coverage_percentage": 12.7,
+      "unknown_percentage": 87.3,
+      "top_products": [
+        {
+          "product_name": "phone",
+          "total_cases": 80023,
+          "responded_cases": 37937,
+          "fcr_rate": 0.078,
+          "escalation_rate": 0.1145,
+          "reopen_rate": 0.0408,
+          "avg_response_time_sec": 50042.2,
+          "avg_sentiment": -0.0347,
+          "high_severity_cases": 1468,
+          "csat_proxy": 46.28
+        },
+        {
+          "product_name": "flight",
+          "total_cases": 51516,
+          "responded_cases": 18240,
+          "fcr_rate": 0.1004,
+          "escalation_rate": 0.0575,
+          "reopen_rate": 0.0498,
+          "avg_response_time_sec": 79501.6,
+          "avg_sentiment": -0.0188,
+          "high_severity_cases": 282,
+          "csat_proxy": 48.42
+        },
+        {
+          "product_name": "app",
+          "total_cases": 41172,
+          "responded_cases": 14296,
+          "fcr_rate": 0.0972,
+          "escalation_rate": 0.108,
+          "reopen_rate": 0.0632,
+          "avg_response_time_sec": 121440.5,
+          "avg_sentiment": -0.0588,
+          "high_severity_cases": 811,
+          "csat_proxy": 45.44
+        },
+        {
+          "product_name": "internet",
+          "total_cases": 25829,
+          "responded_cases": 7765,
+          "fcr_rate": 0.0726,
+          "escalation_rate": 0.2027,
+          "reopen_rate": 0.0359,
+          "avg_response_time_sec": 43013.6,
+          "avg_sentiment": -0.0692,
+          "high_severity_cases": 3812,
+          "csat_proxy": 42.89
+        },
+        {
+          "product_name": "ticket",
+          "total_cases": 13165,
+          "responded_cases": 6469,
+          "fcr_rate": 0.1286,
+          "escalation_rate": 0.076,
+          "reopen_rate": 0.0699,
+          "avg_response_time_sec": 31544.5,
+          "avg_sentiment": -0.0281,
+          "high_severity_cases": 152,
+          "csat_proxy": 47.65
+        }
+      ]
+    },
+    "region_analysis": {
+      "region_mention_cases": 48157,
+      "unique_normalized_regions": 4,
+      "coverage_percentage": 2.54,
+      "unknown_percentage": 97.46,
+      "top_regions": [
+        {
+          "region_name": "store",
+          "total_cases": 37009,
+          "responded_cases": 23135,
+          "fcr_rate": 0.1661,
+          "escalation_rate": 0.0875,
+          "reopen_rate": 0.0803,
+          "avg_response_time_sec": 61703.1,
+          "avg_sentiment": -0.0163,
+          "csat_proxy": 48.13
+        },
+        {
+          "region_name": "london",
+          "total_cases": 7334,
+          "responded_cases": 1648,
+          "fcr_rate": 0.0755,
+          "escalation_rate": 0.0541,
+          "reopen_rate": 0.0577,
+          "avg_response_time_sec": 18936.9,
+          "avg_sentiment": -0.0351,
+          "csat_proxy": 47.4
+        },
+        {
+          "region_name": "in store",
+          "total_cases": 3691,
+          "responded_cases": 1988,
+          "fcr_rate": 0.1566,
+          "escalation_rate": 0.0759,
+          "reopen_rate": 0.0783,
+          "avg_response_time_sec": 31187.2,
+          "avg_sentiment": -0.0247,
+          "csat_proxy": 48.02
+        },
+        {
+          "region_name": "chennai",
+          "total_cases": 123,
+          "responded_cases": 23,
+          "fcr_rate": 0.0813,
+          "escalation_rate": 0.0569,
+          "reopen_rate": 0.0894,
+          "avg_response_time_sec": 8119.9,
+          "avg_sentiment": -0.0837,
+          "csat_proxy": 45.08
+        }
+      ]
+    },
+    "emerging_issues": [
+      {
+        "category": "other",
+        "recent_7d_volume": 170916,
+        "prior_7d_volume": 77569,
+        "growth_rate_pct": 120.34,
+        "emerging_issue_score": 16047842.85
+      },
+      {
+        "category": "technical_support",
+        "recent_7d_volume": 67126,
+        "prior_7d_volume": 32645,
+        "growth_rate_pct": 105.62,
+        "emerging_issue_score": 2349052.61
+      },
+      {
+        "category": "delivery",
+        "recent_7d_volume": 44809,
+        "prior_7d_volume": 16138,
+        "growth_rate_pct": 177.66,
+        "emerging_issue_score": 1313389.84
+      },
+      {
+        "category": "travel_flight",
+        "recent_7d_volume": 24651,
+        "prior_7d_volume": 9995,
+        "growth_rate_pct": 146.63,
+        "emerging_issue_score": 375941.06
+      },
+      {
+        "category": "payment",
+        "recent_7d_volume": 24642,
+        "prior_7d_volume": 10496,
+        "growth_rate_pct": 134.78,
+        "emerging_issue_score": 362731.73
+      }
+    ],
+    "category_breakdown": [
+      {
+        "category": "other",
+        "total_cases": 763748,
+        "responded_cases": 394508,
+        "fcr_rate": 0.1094,
+        "escalation_rate": 0.0086,
+        "reopen_rate": 0.0569,
+        "avg_response_time_sec": 117450.3,
+        "median_response_time_sec": 3574.0,
+        "p90_response_time_sec": 91057.2,
+        "avg_sentiment": -0.0231,
+        "csat_proxy": 49.48
+      },
+      {
+        "category": "technical_support",
+        "total_cases": 305899,
+        "responded_cases": 196453,
+        "fcr_rate": 0.1247,
+        "escalation_rate": 0.2745,
+        "reopen_rate": 0.0698,
+        "avg_response_time_sec": 79842.4,
+        "median_response_time_sec": 5177.5,
+        "p90_response_time_sec": 124785.9,
+        "avg_sentiment": -0.0445,
+        "csat_proxy": 42.06
+      },
+      {
+        "category": "delivery",
+        "total_cases": 147696,
+        "responded_cases": 80252,
+        "fcr_rate": 0.1269,
+        "escalation_rate": 0.0717,
+        "reopen_rate": 0.0738,
+        "avg_response_time_sec": 38990.3,
+        "median_response_time_sec": 1644.0,
+        "p90_response_time_sec": 32568.4,
+        "avg_sentiment": -0.0351,
+        "csat_proxy": 47.41
+      },
+      {
+        "category": "travel_flight",
+        "total_cases": 95574,
+        "responded_cases": 39012,
+        "fcr_rate": 0.1138,
+        "escalation_rate": 0.0262,
+        "reopen_rate": 0.0654,
+        "avg_response_time_sec": 60330.8,
+        "median_response_time_sec": 1892.0,
+        "p90_response_time_sec": 33374.0,
+        "avg_sentiment": -0.0234,
+        "csat_proxy": 48.92
+      },
+      {
+        "category": "payment",
+        "total_cases": 89805,
+        "responded_cases": 27319,
+        "fcr_rate": 0.0969,
+        "escalation_rate": 0.0745,
+        "reopen_rate": 0.0498,
+        "avg_response_time_sec": 78270.8,
+        "median_response_time_sec": 3314.0,
+        "p90_response_time_sec": 104167.8,
+        "avg_sentiment": -0.0471,
+        "csat_proxy": 46.95
+      }
+    ]
+  }
+}

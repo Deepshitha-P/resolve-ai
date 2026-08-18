@@ -1,0 +1,57 @@
+# ── Secrets ──────────────────────────────────────────────────────────────────
+.env
+kaggle.json
+.kaggle/
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Virtual Envs ──────────────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+
+# ── Data / DB ────────────────────────────────────────────────────────────────
+
+# Don't push any backend data
+backend/data/
+backend/backend/data/
+
+# Large data files
+*.parquet
+*.duckdb
+
+# Large raw dataset
+backend/data/raw/twcs_cleaned.csv
+
+# ── Outputs ───────────────────────────────────────────────────────────────────
+outputs/
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+
+# ── Frontend ──────────────────────────────────────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+
+# ── Large Data & DBs ─────────────────────────────────────────────────────────
+*.duckdb
+*.parquet
+*.csv
+data/raw/
+data/chroma_db/
+data/checkpoints/
+data/nlp/
+data/conversations/
+!data/analytics_v2/*.json
+!data/analytics_v2/*.parquet
+backend/data/raw/

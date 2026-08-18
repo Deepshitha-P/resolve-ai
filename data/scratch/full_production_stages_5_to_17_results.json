@@ -1,0 +1,171 @@
+{
+  "raw_rows_processed": 2811774,
+  "conversations_reconstructed": 1898083,
+  "nlp_records_processed": 1898083,
+  "knowledge_layer_counts": {
+    "customer_cases": 1898083,
+    "conversations": 1898083,
+    "resolved_historical_cases": 0,
+    "issue_clusters": 8,
+    "temporal_events": 1,
+    "analytics_snapshots": 15,
+    "policies": 2,
+    "runbooks": 1,
+    "historical_insights": 1
+  },
+  "knowledge_layer_disk_mb": {
+    "customer_cases": 425.87,
+    "conversations": 414.75,
+    "resolved_historical_cases": 3.99,
+    "issue_clusters": 0.01,
+    "temporal_events": 0.0,
+    "analytics_snapshots": 0.01,
+    "policies": 0.01,
+    "runbooks": 0.01,
+    "historical_insights": 0.0
+  },
+  "total_knowledge_docs": 3796194,
+  "total_disk_storage_mb": 844.65,
+  "stages_10_to_17_rag_elapsed_sec": 4.32,
+  "stages_10_to_17_rag_peak_ram_mb": 5.47,
+  "embedding_index_shape": [
+    1528,
+    2000
+  ],
+  "query_evaluations": [
+    {
+      "query": "My internet has been down for 3 days now!! No one is helping.",
+      "query_type": "customer_complaint",
+      "selected_layers": [
+        "customer_cases",
+        "conversations"
+      ],
+      "route_reason": "Query represents a customer complaint or multi-turn thread investigation.",
+      "confidence_score": 0.55,
+      "evidence_count": 3,
+      "evidence_chain": [
+        {
+          "source_id": "DOC-CASE-CONV-592482",
+          "doc_id": "DOC-CASE-CONV-592482",
+          "layer": "customer_cases",
+          "source_type": "customer_cases",
+          "title": "Customer Case CONV-592482 (network)",
+          "excerpt": "Customer complaint CONV-592482: is this an internet provider issue and my room has become a deadzone because this randomly started happening three days ago",
+          "text": "Customer complaint CONV-592482: is this an internet provider issue and my room has become a deadzone because this randomly started happening three days ago",
+          "relevance_score": 0.751,
+          "metadata": {
+            "conversation_id": "CONV-592482",
+            "case_id": "CONV-592482",
+            "turn_count": 1,
+            "category": "network",
+            "subcategory": "",
+            "intent": "network",
+            "problem_type": "service_failure",
+            "sentiment": 0.0,
+            "sentiment_label": "neutral",
+            "urgency": "low",
+            "severity": "high",
+            "escalation_signals": "explicit_escalation",
+            "temporal_signals": "",
+            "resolution_signals": "",
+            "entities_json": "{\"amount\": null, \"currency\": null, \"date_time\": null, \"duration\": null, \"location\": null, \"order_reference_id\": null, \"payment_method\": null, \"product_service\": \"internet\", \"support_channel\": \"twitter\"}",
+            "evidence_spans_json": "{\"category_keyword\": \"internet\", \"emotion_keyword\": null, \"escalation_explicit_escalation\": \"sue\", \"escalation_manager_request\": null, \"escalation_multiple_complaints\": null, \"escalation_no_response_language\": null, \"escalation_repeat_contact\": null, \"escalation_still_unresolved_language\": null, \"resolution_customer_claimed_resolved\": null, \"resolution_customer_claimed_unresolved\": null, \"resolution_waiting_for_resolution\": null, \"resolution_waiting_for_response\": null, \"subcategory_keyword\": null, \"temporal_span\": null, \"urgency_span\": null}",
+            "confidence": 0.9,
+            "label_source": "local_nlp_provider",
+            "model_version": "v1.2-local",
+            "timestamp": "2017-12-03 06:46:54+00:00"
+          }
+        },
+        {
+          "source_id": "DOC-CASE-CONV-591232",
+          "doc_id": "DOC-CASE-CONV-591232",
+          "layer": "customer_cases",
+          "source_type": "customer_cases",
+          "title": "Customer Case CONV-591232 (technical_support)",
+          "excerpt": "Customer complaint CONV-591232: thank you and for helping out with shop with a cop",
+          "text": "Customer complaint CONV-591232: thank you and for helping out with shop with a cop",
+          "relevance_score": 0.6737,
+          "metadata": {
+            "conversation_id": "CONV-591232",
+            "case_id": "CONV-591232",
+            "turn_count": 1,
+            "category": "technical_support",
+            "subcategory": "",
+            "intent": "technical_support",
+            "problem_type": "technical_failure",
+            "sentiment": 0.0,
+            "sentiment_label": "neutral",
+            "urgency": "medium",
+            "severity": "low",
+            "escalation_signals": "",
+            "temporal_signals": "",
+            "resolution_signals": "",
+            "entities_json": "{\"amount\": null, \"currency\": null, \"date_time\": null, \"duration\": null, \"location\": null, \"order_reference_id\": null, \"payment_method\": null, \"product_service\": null, \"support_channel\": \"twitter\"}",
+            "evidence_spans_json": "{\"category_keyword\": \"help\", \"emotion_keyword\": \"thank you\", \"escalation_explicit_escalation\": null, \"escalation_manager_request\": null, \"escalation_multiple_complaints\": null, \"escalation_no_response_language\": null, \"escalation_repeat_contact\": null, \"escalation_still_unresolved_language\": null, \"resolution_customer_claimed_resolved\": null, \"resolution_customer_claimed_unresolved\": null, \"resolution_waiting_for_resolution\": null, \"resolution_waiting_for_response\": null, \"subcategory_keyword\": null, \"temporal_span\": null, \"urgency_span\": \"help\"}",
+            "confidence": 0.78,
+            "label_source": "local_nlp_provider",
+            "model_version": "v1.2-local",
+            "timestamp": "2017-12-03 14:54:33+00:00"
+          }
+        },
+        {
+          "source_id": "DOC-CASE-CONV-591035",
+          "doc_id": "DOC-CASE-CONV-591035",
+          "layer": "customer_cases",
+          "source_type": "customer_cases",
+          "title": "Customer Case CONV-591035 (other)",
+          "excerpt": "Customer complaint CONV-591035: this has been happening for two days on bluebird. can you fix this?",
+          "text": "Customer complaint CONV-591035: this has been happening for two days on bluebird. can you fix this?",
+          "relevance_score": 0.6642,
+          "metadata": {
+            "conversation_id": "CONV-591035",
+            "case_id": "CONV-591035",
+            "turn_count": 2,
+            "category": "other",
+            "subcategory": "",
+            "intent": "other",
+            "problem_type": "unknown",
+            "sentiment": 0.0,
+            "sentiment_label": "neutral",
+            "urgency": "low",
+            "severity": "low",
+            "escalation_signals": "",
+            "temporal_signals": "",
+            "resolution_signals": "",
+            "entities_json": "{\"amount\": null, \"currency\": null, \"date_time\": null, \"duration\": null, \"location\": null, \"order_reference_id\": null, \"payment_method\": null, \"product_service\": null, \"support_channel\": \"twitter\"}",
+            "evidence_spans_json": "{\"category_keyword\": null, \"emotion_keyword\": null, \"escalation_explicit_escalation\": null, \"escalation_manager_request\": null, \"escalation_multiple_complaints\": null, \"escalation_no_response_language\": null, \"escalation_repeat_contact\": null, \"escalation_still_unresolved_language\": null, \"resolution_customer_claimed_resolved\": null, \"resolution_customer_claimed_unresolved\": null, \"resolution_waiting_for_resolution\": null, \"resolution_waiting_for_response\": null, \"subcategory_keyword\": null, \"temporal_span\": null, \"urgency_span\": null}",
+            "confidence": 0.55,
+            "label_source": "local_nlp_provider",
+            "model_version": "v1.2-local",
+            "timestamp": "2017-12-03 16:30:57+00:00"
+          }
+        }
+      ],
+      "grounded_insight": ""
+    },
+    {
+      "query": "What is the capital of Mars and what are its orbital parameters?",
+      "query_type": "root_cause_investigation",
+      "confidence_score": 0.64,
+      "insight": ""
+    }
+  ],
+  "checkpoint_status": {
+    "stage01_raw_data": "COMPLETED",
+    "stage03_conversations": "COMPLETED",
+    "stage04_nlp": "COMPLETED",
+    "stage05_analytics": "COMPLETED",
+    "stage06_temporal_intelligence": "COMPLETED",
+    "stage07_issue_clusters": "COMPLETED",
+    "stage08_analytics_snapshots": "COMPLETED",
+    "stage09_knowledge_memory": "COMPLETED",
+    "stage10_embeddings": "COMPLETED",
+    "stage11_vector_db": "COMPLETED",
+    "stage12_hybrid_retrieval": "COMPLETED",
+    "stage13_query_router": "COMPLETED",
+    "stage14_reranker": "COMPLETED",
+    "stage15_evidence_confidence": "COMPLETED",
+    "stage16_insight_memory": "COMPLETED",
+    "stage17_llm_grounded_insight": "COMPLETED"
+  }
+}

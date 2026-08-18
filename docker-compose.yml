@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: resolve_ai_server
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount config, data, and outputs directory from the host to the container.
+      # This ensures all DuckDB, Parquet, and ChromaDB data are preserved and persistent,
+      # and not deleted or modified during container updates or rebuilds.
+      - ./data:/app/data
+      - ./outputs:/app/outputs
+      - ./config:/app/config
+      # Mount the local environment configuration file so that it uses the same API keys
+      - ./.env:/app/.env
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  frontend:
+    build: ./frontend
+    container_name: resolve_ai_frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - web
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    restart: unless-stopped

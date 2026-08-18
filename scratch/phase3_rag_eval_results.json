@@ -1,0 +1,123 @@
+{
+  "total_queries_tested": 7,
+  "total_execution_time_seconds": 3.77,
+  "peak_memory_mb": 8.33,
+  "query_benchmarks": [
+    {
+      "label": "Customer Complaint Investigation",
+      "query": "My internet has been down for 3 days now!! No one is helping.",
+      "query_type": "customer_complaint",
+      "selected_layers": [
+        "customer_cases",
+        "conversations"
+      ],
+      "route_reason": "Query represents a customer complaint or multi-turn thread investigation.",
+      "evidence_count": 3,
+      "top_evidence_id": "DOC-CASE-CONV-1430",
+      "top_evidence_layer": "customer_cases",
+      "confidence_score": 0.55,
+      "insight_status": "sufficient_evidence",
+      "latency_ms": 137.46,
+      "insight_sample": "1. What happened: Customer reported a high-severity internet_down issue: \"My internet has been down for 3 days now!! No one is helping.\".\n2. Probable root cause: No active incident cluster match; treat as isolated case pending investigation.\n3. Suppo"
+    },
+    {
+      "label": "Historical Resolution Precedent",
+      "query": "How was duplicate charge for payment refunded in precedent cases?",
+      "query_type": "historical_precedent",
+      "selected_layers": [
+        "resolved_historical_cases"
+      ],
+      "route_reason": "Query requests past resolution precedent or proven fix patterns.",
+      "evidence_count": 3,
+      "top_evidence_id": "DOC-POLICY-REFUND-001",
+      "top_evidence_layer": "policies",
+      "confidence_score": 0.93,
+      "insight_status": "sufficient_evidence",
+      "latency_ms": 143.29,
+      "insight_sample": "1. What happened: Customer reported a high-severity duplicate_charge issue: \"How was duplicate charge for payment refunded in precedent cases?\".\n2. Probable root cause: No active incident cluster match; treat as isolated case pending investigation.\n3"
+    },
+    {
+      "label": "Operational Runbook Procedure",
+      "query": "What is the node outage troubleshooting runbook SOP?",
+      "query_type": "operational_procedure",
+      "selected_layers": [
+        "runbooks"
+      ],
+      "route_reason": "Query requests technical standard operating procedures or runbook steps.",
+      "evidence_count": 1,
+      "top_evidence_id": "DOC-RUNBOOK-NETWORK-001",
+      "top_evidence_layer": "runbooks",
+      "confidence_score": 0.9,
+      "insight_status": "sufficient_evidence",
+      "latency_ms": 38.3,
+      "insight_sample": "1. What happened: Customer reported a high-severity widespread_outage issue: \"What is the node outage troubleshooting runbook SOP?\".\n2. Probable root cause: Based on DOC-RUNBOOK-NETWORK-001 (runbooks), this matches a known technical procedure pattern"
+    },
+    {
+      "label": "Operational SLA Policy",
+      "query": "What is the auto-refund SLA policy for double charged customers?",
+      "query_type": "policy",
+      "selected_layers": [
+        "policies"
+      ],
+      "route_reason": "Query requests operational SLA, refund, or business policies.",
+      "evidence_count": 1,
+      "top_evidence_id": "DOC-POLICY-REFUND-001",
+      "top_evidence_layer": "policies",
+      "confidence_score": 0.9,
+      "insight_status": "sufficient_evidence",
+      "latency_ms": 37.74,
+      "insight_sample": "1. What happened: Customer reported a high-severity duplicate_charge issue: \"What is the auto-refund SLA policy for double charged customers?\".\n2. Probable root cause: No active incident cluster match; treat as isolated case pending investigation.\n3."
+    },
+    {
+      "label": "Incident Cluster Analysis",
+      "query": "Show me the widespread network outage incident cluster details.",
+      "query_type": "incident",
+      "selected_layers": [
+        "issue_clusters"
+      ],
+      "route_reason": "Query requests macro incident cluster analysis or pain point scores.",
+      "evidence_count": 3,
+      "top_evidence_id": "DOC-CLUSTER-2",
+      "top_evidence_layer": "issue_clusters",
+      "confidence_score": 0.67,
+      "insight_status": "sufficient_evidence",
+      "latency_ms": 40.4,
+      "insight_sample": "1. What happened: Customer reported a high-severity network issue: \"Show me the widespread network outage incident cluster details.\".\n2. Probable root cause: Correlated with macro incident cluster DOC-CLUSTER-2 (DOC-CLUSTER-2).\n3. Supporting evidence"
+    },
+    {
+      "label": "Temporal Volume Surge Signals",
+      "query": "Are there any temporal volume surge spikes detected?",
+      "query_type": "temporal_spike",
+      "selected_layers": [
+        "temporal_events"
+      ],
+      "route_reason": "Query requests temporal volume surge signals or spike trends.",
+      "evidence_count": 3,
+      "top_evidence_id": "SNAP-SPIKE-Global-payment",
+      "top_evidence_layer": "analytics_snapshots",
+      "confidence_score": 0.58,
+      "insight_status": "sufficient_evidence",
+      "latency_ms": 158.93,
+      "insight_sample": "1. What happened: Customer reported a medium-severity other issue: \"Are there any temporal volume surge spikes detected?\".\n2. Probable root cause: No active incident cluster match; treat as isolated case pending investigation.\n3. Supporting evidence:"
+    },
+    {
+      "label": "Insufficient Evidence Defense Check",
+      "query": "Alien quantum subspace frequency disconnection error 99999",
+      "query_type": "root_cause_investigation",
+      "selected_layers": [
+        "runbooks",
+        "policies",
+        "issue_clusters",
+        "resolved_historical_cases"
+      ],
+      "route_reason": "Multi-intent query: routing across policies, runbooks, clusters, and resolved precedents for root cause analysis.",
+      "evidence_count": 0,
+      "top_evidence_id": "none",
+      "top_evidence_layer": "none",
+      "confidence_score": 0.0,
+      "insight_status": "insufficient_evidence",
+      "latency_ms": 45.15,
+      "insight_sample": "1. What happened: Insufficient evidence in knowledge base to answer query.\n2. Probable root cause: Unknown (no matching evidence or runbook found).\n3. Supporting evidence: None retrieved.\n4. Confidence: 0% - Insufficient evidence in knowledge memory."
+    }
+  ]
+}

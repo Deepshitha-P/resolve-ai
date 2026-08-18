@@ -1,0 +1,53 @@
+# RootIQ UC18 Block A Configuration
+
+dataset:
+  raw_csv_path: "data/raw/twcs_cleaned.csv"
+  source_type: "twcs_case"
+  default_sample_size: 1000  # Milestone A default
+
+storage:
+  base_dir: "data"
+  raw_dir: "data/raw"
+  parquet_dir: "data/parquet"
+  conversations_dir: "data/conversations"
+  nlp_dir: "data/nlp"
+  analytics_dir: "data/analytics"
+  knowledge_dir: "data/knowledge"
+  checkpoints_dir: "data/checkpoints"
+  chunk_size: 50000
+
+nlp:
+  default_provider: "local"
+  subtype_taxonomy:
+    duplicate_charge: ["charg.*twice", "double charg", "charg.*again", "charg.*credit card.*twice", "duplicate"]
+    incorrect_amount: ["wrong amount", "overcharg", "extra charg", "hidden fee", "higher than", "too much", "wrong.*order", "pay.*\\$", "charge.*for", "false charge", "ripped off"]
+    late_fee: ["late fee", "penalty", "late charg"]
+    refund_delay: ["refund", "money back", "want my .* back"]
+    payment_failed: ["payment fail", "declin", "error pay", "can't pay", "cannot pay", "won't let me pay"]
+    billing_cycle_timing: ["renew", "trial end", "month", "expired"]
+    account_issue: ["find.*account", "account", "login", "password", "access", "profile"]
+    charge_inquiry: ["charg", "bill", "invoice", "pay", "card", "price", "cost"]
+  taxonomy:
+    - "payment"
+    - "refund"
+    - "billing"
+    - "network"
+    - "service_outage"
+    - "account"
+    - "authentication"
+    - "delivery"
+    - "technical_support"
+    - "complaint_followup"
+    - "device_hardware"
+    - "travel_flight"
+    - "store_operations"
+    - "feature_request"
+    - "other"
+
+temporal:
+  spike_z_threshold: 1.5
+  min_spike_count: 5
+
+clustering:
+  n_clusters: 8
+  max_sample_size: 10000

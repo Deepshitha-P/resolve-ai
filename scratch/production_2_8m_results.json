@@ -1,0 +1,73 @@
+{
+  "raw_rows_processed": 2811774,
+  "conversations_reconstructed": 1898083,
+  "nlp_records_processed": 1898083,
+  "knowledge_layer_counts": {
+    "customer_cases": 1898083,
+    "conversations": 1898083,
+    "resolved_historical_cases": 28583,
+    "issue_clusters": 8,
+    "temporal_events": 1,
+    "analytics_snapshots": 15,
+    "policies": 2,
+    "runbooks": 1,
+    "historical_insights": 28
+  },
+  "knowledge_layer_disk_mb": {
+    "customer_cases": 425.87,
+    "conversations": 414.75,
+    "resolved_historical_cases": 7.78,
+    "issue_clusters": 0.01,
+    "temporal_events": 0.0,
+    "analytics_snapshots": 0.01,
+    "policies": 0.01,
+    "runbooks": 0.01,
+    "historical_insights": 0.01
+  },
+  "total_knowledge_docs": 3824804,
+  "total_disk_storage_mb": 848.45,
+  "analytics_category_breakdown": {
+    "network": 61264,
+    "delivery": 147696,
+    "technical_support": 305899,
+    "service_outage": 36397,
+    "other": 763748,
+    "payment": 89805,
+    "refund": 18891,
+    "store_operations": 66686,
+    "account": 89081,
+    "feature_request": 13040,
+    "device_hardware": 75384,
+    "complaint_followup": 44388,
+    "billing": 77567,
+    "travel_flight": 95574,
+    "authentication": 12663
+  },
+  "analytics_response_rate": 0.5187,
+  "clusters_generated": 8,
+  "incident_candidates": 8,
+  "query_routing_result": {
+    "query": "My internet has been down for 3 days now!! No one is helping.",
+    "query_type": "customer_complaint",
+    "selected_layers": [
+      "customer_cases",
+      "conversations"
+    ],
+    "route_reason": "Query represents a customer complaint or multi-turn thread investigation.",
+    "confidence_score": 0.58,
+    "evidence_count": 3,
+    "top_evidence_id": "DOC-CASE-CONV-669033"
+  },
+  "runtime_total_seconds": 20593.88,
+  "stage4_nlp_runtime_seconds": 3297.92,
+  "stage9_knowledge_runtime_seconds": 17272.59,
+  "peak_memory_mb": 364.1,
+  "errors_or_warnings": 0,
+  "checkpoint_status": {
+    "stage01_raw_data": "COMPLETED",
+    "stage03_conversations": "COMPLETED",
+    "stage04_nlp": "COMPLETED",
+    "stage05_analytics": "COMPLETED",
+    "stage09_knowledge_memory": "COMPLETED"
+  }
+}

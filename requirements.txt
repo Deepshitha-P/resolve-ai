@@ -1,0 +1,22 @@
+scikit-learn>=1.3
+numpy>=1.24
+pydantic>=2.0
+pyyaml>=6.0
+duckdb>=1.0
+pyarrow>=14.0
+chromadb>=0.5
+python-dotenv>=1.0
+pypdf
+fastapi>=0.100
+uvicorn>=0.20
+spacy>=3.5
+tiktoken>=0.4
+python-multipart>=0.0.6
+# ── Transformer NLP models (stage04) ──────────────────────────────────────────
+transformers>=4.35
+torch>=2.0
+sentencepiece>=0.1.99
+# ── Dense embeddings (stage10 + stage11) ──────────────────────────────────────
+fastembed>=0.2
+langchain-text-splitters>=0.0.1
+kaggle>=1.6

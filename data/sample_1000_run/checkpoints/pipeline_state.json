@@ -1,0 +1,23 @@
+{
+  "stage01_raw_data": {
+    "status": "COMPLETED",
+    "timestamp": "2026-08-14T05:47:38.098115+00:00",
+    "metadata": {
+      "count": 1000
+    }
+  },
+  "stage03_conversations": {
+    "status": "COMPLETED",
+    "timestamp": "2026-08-14T05:47:38.185035+00:00",
+    "metadata": {
+      "count": 710
+    }
+  },
+  "stage04_nlp": {
+    "status": "COMPLETED",
+    "timestamp": "2026-08-14T05:47:38.264415+00:00",
+    "metadata": {
+      "count": 710
+    }
+  }
+}
